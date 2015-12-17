@@ -1,0 +1,545 @@
+--Draw API 0.3
+--NuAoA
+--Lots of credit to nPaintPro's author for the whole table -> display stuff. most of these functions are built off nPaintPro's format.
+
+local hexnums = { [10] = "a", [11] = "b", [12] = "c", [13] = "d", [14] = "e" , [15] = "f" }
+local lastimage = {}
+if fs.exists("wrap") then os.loadAPI("wrap") end
+local DrawModem
+
+function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
+end		
+
+--Returns the color value of 'hex'
+function getColourOf(hex)
+        local value = tonumber(hex, 16)
+        if not value then return nil end
+        value = math.pow(2,value)
+        return value
+end
+ 
+--Returns the hex string of 'colour'
+function getHexOf(colour)
+        if not colour or not tonumber(colour) then
+                return " "
+        end
+        local value = math.log(colour)/math.log(2)
+        if value > 9 then
+                value = hexnums[value]
+        end
+        return tostring(value)
+end
+ 
+-- Draws a picture as a image, arg[1] is a text overlay table. If arg[2] is true then we check the last used image&text for differences and only draw whats different (Does not support text color).
+--Note, image and text have to be the same size
+function drawPictureTable(mon, image, xinit, yinit, alpha,...)
+	local isModem = false		
+	if mon == nil then return end
+	if type(mon) == "string" then
+		isModem = true
+		DrawModem = wrap.attach("modem")
+	end
+	if not alpha then alpha = 1 end
+	local text_tab = deepcopy(arg[1])  
+	if type(image) ~= "table" then error("[DRAW] 'image' is not a table",2) end
+	for y=1,#image do
+		for x=1,#image[y] do                   
+			local col = getColourOf(string.sub(image[y], x, x))
+			local tex = " "
+			local text_offset = 0
+			if not col then col = alpha end
+			if (isModem and DrawModem.callRemote(mon,"isColor")) or mon.isColor() then
+					if isModem then
+						DrawModem.callRemote(mon, "setBackgroundColor",col)
+					else
+						mon.setBackgroundColour(col)
+					end								
+			else
+					if string.sub(image[y], x, x) ~= " " then
+							if isModem then
+								DrawModem.callRemote(mon, "setBackgroundColor",colors.black)
+							else
+								mon.setBackgroundColour(colors.black)
+							end
+					else
+							if isModem then
+								DrawModem.callRemote(mon, "setBackgroundColor",colors.white)
+							else
+								mon.setBackgroundColour(colors.white)
+							end
+					end
+			end
+			if arg[1] ~= nil and text_tab[y] ~= nil then                           
+				tex = string.sub(text_tab[y],x,x)
+				if tex == "&" then
+					local txtclr = getColourOf(string.sub(text_tab[y],x+text_offset+1,x+text_offset+1))
+					if txtclr ~= nil then
+						if (isModem and DrawModem.callRemote(mon,"isColor")) or mon.isColor() then
+							if isModem then
+								DrawModem.callRemote(mon, "setTextColor",txtclr)
+							else
+								mon.setTextColor(txtclr)
+							end
+						end
+						--text_offset = text_offset+1
+						text_tab[y] = string.sub(text_tab[y],3,string.len(text_tab[y]))
+						tex = string.sub(text_tab[y],x+text_offset,x+text_offset)
+					end
+				end                                            
+			end
+			if string.len(tex) ~= 1 then
+				tex = " "
+			end
+			if arg[2] and (string.sub(image[y], x, x) ~= string.sub(lastimage["image"][y], x, x) or string.sub(text_tab[y], x, x) ~= string.sub(lastimage["text"][y], x, x)) then
+				if isModem then
+					DrawModem.callRemote(mon, "setCursorPos",xinit + x-1,yinit + y-1)
+					DrawModem.callRemote(mon,"write",tex)
+				else
+					mon.setCursorPos(xinit + x-1, yinit + y-1)
+					mon.write(tex)
+				end
+			elseif arg[2] == nil then
+				if isModem then
+					DrawModem.callRemote(mon, "setCursorPos",xinit + x-1,yinit + y-1)
+					DrawModem.callRemote(mon,"write",tex)
+				else
+					mon.setCursorPos(xinit + x-1, yinit + y-1)
+					mon.write(tex)
+				end
+			end
+		end
+	end
+	lastimage["image"] = image
+	lastimage["text"] = text_tab
+	if isModem then
+		DrawModem.callRemote(mon, "setTextColor",colors.white)
+		DrawModem.callRemote(mon,"setBackgroundColor",colors.black)
+	else
+		mon.setTextColor(colors.white)
+		mon.setBackgroundColor(colors.black)
+	end
+end
+function draw(mon,image,xinit,yinit,alpha,...)
+	return drawPictureTable(mon, image, xinit, yinit, alpha,...)
+end
+-- Generates empty tables.
+function emptyScreen(mon,...)
+		local isModem = false		
+		if mon == nil then return end
+		if type(mon) == "string" then
+			isModem = true
+			DrawModem = wrap.attach("modem")
+		end
+        local x_max,y_max
+		if isModem then
+			x_max,y_max = DrawModem.callRemote(mon,"getSize")
+		else
+			x_max,y_max = mon.getSize()
+		end
+		x_max = x_max-1
+        local tab = {}
+        if #arg >0 then
+                x_max = arg[1]
+                y_max = arg[2]
+        end    
+        for y=1,y_max do
+                local str = " "
+                for x=1,x_max do
+                        str = str.." "
+                end
+                tab[y] = str
+        end
+        return tab,deepcopy(tab)
+end
+ 
+--Will add color  to a table at xpos,ypos. optional args are (table_text,text,text_color). It will overlap any existing colors.
+-- addtoTables(xpos,ypos,table_color,bg_color,x_fin,y_fin)
+function addColorToTable(table_color,xpos,ypos,bg_color,...)
+        local x_fin = arg[1]
+        local y_fin = arg[2]
+        if #arg <2 then
+                x_fin = xpos
+                y_fin = ypos
+        end
+        if ypos > #table_color then
+            error("DrawAPI: Index out of bounds ("..ypos..","..#table_color..")",2)
+			ypos = #table_color
+        end
+        ypos = math.floor(ypos)
+        xpos = math.floor(xpos)
+        for y=ypos,y_fin do
+                for x=xpos,x_fin do
+                        if tonumber(bg_color) == nil then
+                                table_color[y] = string.sub(table_color[y],0,x-1).." "..string.sub(table_color[y],x+1)
+                        else
+                                table_color[y] = string.sub(table_color[y],0,x-1)..getHexOf(bg_color)..string.sub(table_color[y],x+1)
+                        end
+                end
+        end
+        return table_color
+end
+--Shorthand for addColorToTable
+function tc(...)
+        if #arg <6 then
+                return addColorToTable(arg[1],arg[2],arg[3],arg[4])
+        else
+                return addColorToTable(arg[1],arg[2],arg[3],arg[4],arg[5],arg[6])
+        end
+end
+-- Adds text to a table, optional args are text_color. I would not recomend trying to overwrite text to erase it, as forgotton color codes will literally become landmines. just replace the value with a new blank string.
+function addTextToTable(table_text,xpos,ypos,text,...)
+        local text_color = arg[1]
+        local color_offset =0
+        local text_offset = 0
+        if arg[1] == nil then
+                text_color = colors.white
+        end
+        if ypos > #table_text then
+                error("index out of bounds ("..ypos..","..#table_text..")")
+        end
+        ypos = math.floor(ypos)
+        xpos = math.floor(xpos)
+ 
+        for i=1,string.len(table_text[ypos]) do
+                if string.sub(table_text[ypos],i,i)=="&" and i<xpos+color_offset then
+                        color_offset = color_offset+2
+                end
+        end
+        --table_text[ypos] = string.sub(table_text[ypos],0,xpos+color_offset-1).."  "..string.sub(table_text[ypos],xpos+color_offset)
+        if string.sub(table_text[ypos],color_offset+xpos,color_offset+xpos)=="&" then
+                if string.match(text,"&%S") then
+                        table_text[ypos] = string.sub(table_text[ypos],0,xpos+color_offset-1)..text..string.sub(table_text[ypos],xpos+color_offset+string.len(text))
+                else
+                        table_text[ypos] = string.sub(table_text[ypos],0,xpos+color_offset-1).."&"..getHexOf(text_color)..text..string.sub(table_text[ypos],xpos+color_offset+2+string.len(text))
+                end
+        else
+        --if text == nil then error("1000 ",2) end
+        table_text[ypos] = string.sub(table_text[ypos],0,xpos+color_offset-1).."&"..getHexOf(text_color)..text..string.sub(table_text[ypos],xpos+color_offset+string.len(text))
+        end
+ 
+        return deepcopy(table_text)
+end
+--Shorthand for addTextToTable
+function tt(...)
+        if #arg <5 then
+                return addTextToTable(arg[1],arg[2],arg[3],arg[4])
+        elseif #arg == 5 then
+                return addTextToTable(arg[1],arg[2],arg[3],arg[4],arg[5])
+        end
+end
+ 
+-- Will create a pulldown at xpos,ypos, and return the users input. arg[1] (t/f) defines if the title bar should be the full width of the pulldown or not (usefull for file menus), arg[2-5] are colors.
+function createPulldown(xpos,ypos,list,...)
+        local c_title = colors.green
+        local c_titletext = colors.white
+        local c_list = colors.cyan
+        local c_listtext = colors.white
+        local PDwidth = string.len(list[1])
+        local xsize,ysize = term.getSize()
+        local offset = 0       
+        if #arg >= 5 then
+                c_title = arg[2]
+                c_titletext = arg[3]
+                c_list = arg[4]
+                c_listtext = arg[5]
+        end    
+ 
+        for i=1,#list do
+                if string.len(list[i])>PDwidth then
+                        PDwidth = string.len(list[i])
+                end
+        end    
+        local t_bg,t_t = emptyScreen(term,PDwidth-1,#list)
+        --t_t = tt(t_t,1,1,list[1],c_titletext)
+        --t_bg = tc(t_bg,1,2,c_list,PDwidth,#list)
+        t_t[1] = "&"..getHexOf(c_titletext)..list[1]
+        if arg[1] then
+                t_bg = tc(t_bg,1,1,c_title,string.len(list[1]),1)
+                t_bg[1] = string.sub(t_bg[1],0,string.len(list[1]))
+        elseif not arg[1] then 
+                t_bg = tc(t_bg,1,1,c_title,PDwidth,1)
+        end
+        for i=2,#list do
+                if string.match(string.sub(list[i],1,1),">") then                      
+                        t_t = tt(t_t,1,i,string.sub(list[i],2,#list[i]),colors.lightGray)                      
+                        c_list = colors.lightBlue
+                        t_bg = tc(t_bg,1,i,c_list,PDwidth,i)
+                else
+                        t_bg = tc(t_bg,1,i,c_list,PDwidth,i)
+                        t_t = tt(t_t,1,i,list[i],c_listtext)
+                end
+        end
+        if xpos+PDwidth > xsize then
+                if arg[1] then                 
+                        drawPictureTable(term,{t_bg[1],""}, xsize - PDwidth+1,ypos,colors.black,{t_t[1],""})
+                        t_t[1] = ""
+                        t_bg[1] = ""           
+                end
+                xpos = xsize - PDwidth+1                       
+        end
+        if ypos+#list >ysize then
+                ypos = ysize-#list+1
+        end    
+       
+        drawPictureTable(term,t_bg,xpos,ypos,colors.black,t_t)
+        local event, button1, xPos2, yPos2 = os.pullEvent("mouse_click","monitor_touch")
+        if xPos2 >= xpos and xPos2 <= xpos+PDwidth and yPos2 >= ypos+1 and yPos2<=ypos+#list-1 and button1 == 1 and event == "mouse_click" then
+                return list[yPos2-ypos+1],xPos2,yPos2,button1,event
+        else
+                if arg[6] and xPos2 >= xpos and xPos2 <= xpos+PDwidth and yPos2 == ypos and button1 == 1 and event== "mouse_click" then
+                        return list[yPos2-ypos+1],xPos2,yPos2,button1,event
+                end
+                return "exit",xPos2,yPos2,button1,event
+        end            
+end
+--Used to make a pulldown within another pulldown
+function pullsideways(list,xpos,ypos,gap)
+        local t_c = {"",""}
+        local t_t = {"",""}
+        local offset = gap+#list[1]
+        for i=1,offset do
+                t_c[1] = t_c[1]..getHexOf(colors.green)
+                t_t[1] = t_t[1].." "
+        end    
+        t_t = tt(t_t,1,1,list[1])
+        local newlist = {}
+        for i=1, #list-2 do
+                newlist[i] = list[i+2]
+        end
+        local c_title = colors.cyan
+        local c_titletext = colors.white
+        local c_list = colors.cyan
+        local c_listtext = colors.white
+        drawPictureTable(term,t_c,xpos,ypos,colors.black,t_t)
+        --local result,xpos2,ypos2,button = createPulldown(xpos,ypos2,list,true)
+        return createPulldown(xpos+offset,ypos,newlist,false,c_title,c_titletext,c_list,c_listtext,true)
+end
+--if arg[1] is true then the dialog will be a yes/no dialog. Blank means just 'OK', "string" or "number" will prompt for a custom input of that type.
+function userInput(text,...)
+        local screen = term
+        local x1,y1 = screen.getSize() 
+        local t_bg,t_t = emptyScreen(screen,x1,y1)
+        local bg_color = colors.white
+        local fg_color = colors.lightBlue
+        local b_color = colors.yellow
+        local text_color = colors.white
+        local xpadding = 4
+        local text_start = math.floor(y1/2) -1
+        local lines = {}
+        if string.len(text) > x1-(2+xpadding*2) then
+                local newline = ""
+               
+                local i = 1
+                for word in string.gmatch(text, "%S+") do
+                        if string.len(newline.." "..word) > x1-10 then
+                                lines[i] = newline
+                                i=i+1
+                                newline = word
+                        else
+                                newline = newline.." "..word
+                        end
+                end
+                if newline ~= nil then
+                        lines[#lines+1] = newline
+                end
+                text_start = math.floor(y1/2 - #lines/2 -1)
+                for i=1,#lines do
+                        t_t = tt(t_t,math.floor((x1-string.len(lines[i]))/2),text_start+i,lines[i],text_color)
+                end
+        else --one line message
+                t_t = tt(t_t,math.floor((x1-string.len(text))/2),text_start,text,text_color)
+        end
+        t_bg = tc(t_bg,1,1,bg_color,x1,y1) --background
+        t_bg = tc(t_bg,xpadding,text_start-1,fg_color,x1-xpadding,text_start+4+#lines) --forground
+        if arg[1] == nil then
+                t_bg = tc(t_bg,math.floor(x1/2-1),text_start+#lines+3,b_color,math.floor(x1/2+2),text_start+#lines+3)
+                t_t = tt(t_t,math.floor(x1/2),text_start+#lines+3,"OK",colors.black)
+        elseif arg[1] == true then
+                t_bg = tc(t_bg,x1/2-9,text_start+#lines+3,b_color,x1/2-5,text_start+#lines+3)
+                t_bg = tc(t_bg,x1/2+5,text_start+#lines+3,b_color,x1/2+8,text_start+#lines+3)
+                t_t = tt(t_t,x1/2-8,text_start+#lines+3,"Yes",colors.black)
+                t_t = tt(t_t,x1/2+6,text_start+#lines+3,"No",colors.black)             
+        elseif arg[1] == "string" or arg[1] == "number" then
+                t_t = tt(t_t,x1/2-12,text_start+#lines+2,">",text_color)
+                t_bg = tc(t_bg,x1/2-12,text_start+#lines+2,colors.black,x1/2+13,text_start+#lines+2)           
+        end
+        drawPictureTable(screen, t_bg, 1, 1, colors.black,t_t)
+        if arg[1] == "string" or arg[1] == "number" then
+                while true do
+                        drawPictureTable(screen, t_bg, 1, 1, colors.black,t_t)
+                        screen.setCursorPos(x1/2-11,text_start+#lines+2)
+                        local input
+                        if arg[2] then                                                 
+                                input = read("*")                              
+                        else
+                                input = io.read()
+                        end
+                        if arg[1] == "string" then
+                                if input ~= "" and tostring(input) ~= nil then
+                                        return input
+                                else
+                                        userInput("The input has to be a string")
+                                end
+                        elseif arg[1] == "number" then
+                                if tonumber(input) ~= nil then
+                                        return tonumber(input)
+                                else
+                                        userInput("The input has to be a number")
+                                end
+                        end                            
+                end
+        else
+                while true do
+                        local event, button1, xpos2, ypos2 = os.pullEvent()                    
+                        if arg[1] and (event == "mouse_click" or event == "key") then
+                                if event == "key" and button1 == 28 then
+                                        return true
+                                end
+                                if xpos2>=x1/2-10 and xpos2<=x1/2-5 and ypos2 == text_start+#lines+3 then
+                                        return true
+                                elseif xpos2>=x1/2+4 and xpos2<=x1/2+8 and ypos2 == text_start+#lines+3 then
+                                        return false
+                                end
+                        elseif not arg[1] then
+                                if event =="key" then
+                                        return true
+                                elseif event == "mouse_click" and xpos2>=x1/2-2 and xpos2<=x1/2+2 and ypos2 == text_start+#lines+3 then
+                                        return true
+                                end                    
+                        end
+                end
+        end
+end
+
+-- Overwrites table 1 with table 2.
+function overwriteTable(tab1,tab2)
+        for i=1,#tab1 do
+                local line = ""        
+                for j=1,#tab1[i] do
+                        local tex1 = string.sub(tab1[i],j,j)
+                        local tex2 = " "
+                        if #tab2 >= i then
+                                tex2= string.sub(tab2[i],j,j)
+                        end
+                        if tex1 == nil then
+                                tex1 = " "
+                        end
+                        if tex2 == nil then
+                                tex2 = " "
+                        end
+                        if tex2 == " " then
+                                line = line..tex1
+                        else
+                                line = line..tex2
+                        end                    
+                end
+                tab1[i] = line
+        end
+        return tab1
+end 
+
+ 
+--Will replace any color (or only arg[1])  in a table with " ", or whatever color arg[2] is. if arg[1] == true then every color will be replaced with arg[2] or " "
+function replaceColorTable(tab,...)
+        local tex = " "
+        local color_hex = "%S"
+        if #arg > 0 then
+                if arg[1] ~= true then
+                        color_hex = getHexOf(arg[1])
+                end
+                if #arg >1 then
+                        tex = getHexOf(arg[2])
+                end
+        end
+        for i=1,#tab do
+                local line = ""
+                for j=1,#tab[i] do
+                        if string.match(string.sub(tab[i],j,j),color_hex) then
+                                line = line..tex
+                        else
+                                line = line..string.sub(tab[i],j,j)
+                        end
+                end
+                tab[i] = line
+        end
+        return tab
+end
+ 
+--Will scan table tab for arg[1], returns true if found. if no args supplied will scan tab for any non-space character
+function scanTableFor(tab,...)
+        local tex = " "
+        if #arg>0 then tex = getHexOf(arg[1]) end
+        for i=1,#tab do        
+                for j=1,#tab[i] do
+                        if #arg == 0 and string.sub(tab[i],j,j) ~= tex and string.sub(tab[i],j,j) ~= " " then
+                                return true
+                        elseif #arg >0 and string.sub(tab[i],j,j) == tex then
+                                return true
+                        end
+                end            
+        end
+        return false
+end 
+
+ 
+function colorsPullSideways(name,xpos,ypos,gap)
+        local t_c = {"",""}
+        local t_t = {"",""}
+        local xoff = 0
+        local yoff = 0
+        local xsize,ysize = term.getSize()
+        local offset = gap+string.len(name)
+        for i=1,offset do
+                t_c[1] = t_c[1]..getHexOf(colors.green)
+                t_t[1] = t_t[1].." "
+        end    
+        t_t = tt(t_t,1,1,name)
+        local newlist = {}     
+        local c_title = colors.cyan
+        local c_titletext = colors.white
+        local c_list = colors.cyan
+        local c_listtext = colors.white
+       
+        local t_c2,t_t2 = emptyScreen(term,3,5)
+        t_c2 = tc(t_c2,1,1,colors.green,4,1)
+        local iter = 1
+        for i=1,4 do
+                for j=1,4 do
+                        t_c2 = tc(t_c2,i,j+1,sig_values[iter])
+                        iter = iter+1
+                end            
+        end
+        if xpos+offset+4 >= xsize then
+                xoff = 3-(xsize-(xpos+offset))
+        end
+        if ypos+4>ysize then
+                yoff = 4-(ysize-ypos)
+        end
+        drawPictureTable(term,t_c,xpos,ypos,colors.black,t_t)
+        drawPictureTable(term,t_c2,xpos+offset-xoff,ypos-yoff,colors.black)
+        local event, button1, xpos2, ypos2 = os.pullEvent("mouse_click","monitor_touch")
+        if xpos2 >= xpos+offset-xoff and xpos2<=xpos+4+offset-xoff and ypos2>ypos-yoff and ypos2<=ypos+5-yoff and event == "mouse_click" then
+                iter=1
+                for i=1,4 do
+                        for j=1,4 do
+                                if xpos2-(offset+xpos-1)+xoff == i and ypos2-ypos+yoff ==j then
+                                        return sig_values[iter]
+                                end
+                                iter = iter+1
+                        end            
+                end
+        end
+        return nil
+end

@@ -1,0 +1,8 @@
+function printTbl(tbl)
+   for i,j in pairs(tbl) do
+      print(i..":"..j)
+   end
+end
+
+names = peripheral.getNames()
+printTbl(names)

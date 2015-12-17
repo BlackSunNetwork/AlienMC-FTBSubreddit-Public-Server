@@ -1,0 +1,5 @@
+--If this was cc 1.6 or above
+--shell.openTab("rules", "monitor_2")
+--shell.openTab("rules". "monitor_3")
+shell.run("rules", "monitor_3")
+shell.run("rules", "monitor_2")

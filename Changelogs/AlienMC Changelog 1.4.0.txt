@@ -1,0 +1,159 @@
+AlienMC 1.4.1 Changelog
+
+Updated:
+Advanced Repulsion Systems
+Advanced Machines
+Advanced Solar Panels
+Another One Bites The Dust
+Applied Energistics 2
+Aroma1997Core
+asielib
+Baubles
+BD Lib
+Better Title Screen
+BiblioCraft
+Big Reactors
+Binnie Core
+Biomes O` Plenty
+Blood Magic: Alchemical Wizardry
+Botania
+BuildCraft
+BuildCraft Compat
+Carpenter`s Blocks
+ChickenChunks
+Chisel 2
+CodeChicken Core
+CoFH Core
+Compact Solar Arrays
+ComputerCraft
+Cosmetic Armor
+Decocraft
+Dense Ores
+Dimensional Anchors
+Ender IO
+EnderStorage
+EnderTech
+Ender Zoo
+EnhancedPortals
+ExtraCells
+ExtraTiC
+Extra Utilities
+FastCraft
+Fast Leaf Decay
+Flat Signs
+Forbidden Magic
+Forestry for Minecraft
+Forge Multipart
+FoxLib
+Funky Locomotion
+GenDustry
+Gravitation Suite
+Hats
+HatStand
+iChunUtil
+Iguana Tinker Tweaks
+In-Game wiki Mod
+Immibis Core
+IndustrialCraft 2
+InfiniBows
+Inventory Tweaks
+Iron Chest
+JABBA
+JourneyMap
+libsandstone
+Logistics Pipes
+Magic Bees
+Mantle
+Mekanism
+MekanismGenerators
+MekanismTools
+MineFactory Reloaded
+MineTweaker 3
+MobiusCore
+ModTweaker
+MoreChisels
+Morph
+MrTJPCore
+Natura
+NEI Addons
+NEI Integration
+NEI Plugins Unofficial
+Nether Ores
+Not Enough Codecs
+Not Enough Items
+Not Enough Keys
+Not Enough Resources
+Nuclear Control 2
+ObsidiPlates
+OpenBlocks
+OpenComputers
+OpenEye
+OpenModsLib
+OpenPeripheralCore
+Pam`s HarvestCraft
+PneumaticCraft
+ProjectRed
+ProjectRed-Compatibility
+ProjectRed-Transmission
+ProjectRed-Illumination
+ProjectRed-Expansion
+ProjectRed-Exploration
+Railcraft
+Redstone Arsenal
+Reliquary
+RFTools
+Runic Dungeons
+Simply Jetpacks
+Solar Expansion
+Statues
+Steve`s Carts 2
+Steve`s Factory Manager
+Steve`s Workshop
+Sync
+Tails
+Tinkers` Construct
+Thaumcraft
+Thaumic Energistics
+Thaumic Exploration
+Thaumic Tinkerer
+Thermal Dynamics
+Thermal Expansion
+Thermal Foundation
+TiC Tooltips
+Tinkers` Mechworks
+Translocator
+ttCore
+The Twilight Forest
+Waila
+Waila Harvestability
+Waila Plugins
+Wawla
+WR-CBE Core
+
+
+Added:
+Apple Core v1.1.0
+Automagy v0.22.2
+CustomThings v0.0.2-27
+Damage Indicators v3.2.3
+Electrical Age Beta v1.9-r46
+GravityGun
+Illuminated Bows v1.7.1f
+ProjectX
+PortalGun
+RandomThings
+RecipeTweakingCore
+RedLogic
+Sanguimancy
+TPPI-Tweaks
+Tinker's Steelworks
+Ztones
+
+Temporarily Removed until bugs fixed:
+Equivalent Exchange 3
+
+Removed:
+ProjectE
+
+Disabled By Default:
+Opis

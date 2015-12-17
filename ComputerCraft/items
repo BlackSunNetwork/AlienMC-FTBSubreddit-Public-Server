@@ -1,0 +1,98 @@
+--local p = peripheral.wrap("top")
+local mon = peripheral.wrap("right")
+os.loadAPI("Draw")
+mon.setTextScale(1)
+function getHTTP()
+	return http.get("https://raw.github.com/AlienMC/AlienMC-FTBSubreddit-Public-Server/master/Server%20Rules.md")
+end
+
+function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
+end		
+
+function getAndParseRules()
+	local xmax,ymax = mon.getSize()
+	local rules = getHTTP()
+	local tt = {}
+  local count = 1
+	local line = ""
+	while line ~= nil do
+count=count+1
+		line = rules.readLine()
+		if line ~= nil then
+			line = string.gsub(line,"<b>","&"..Draw.getHexOf(colors.red))
+			line = string.gsub(line,"</b>"," &"..Draw.getHexOf(colors.lime))
+			line = string.gsub(line,"<li>","")
+			line = string.gsub(line,"<%S+>","")
+			line = string.gsub(line,"<a %S+>","")
+			line = string.match(line,"%s+(.+)")
+   if line == nil then line =""end
+			if string.len(line) > xmax then
+				local str = ""
+				for word in string.gmatch(line,"%S+") do
+					if string.len(str.." "..word) < xmax then 
+						str = str..word.." "
+					else
+						table.insert(tt,str)
+						str = "      "..word.." "
+					end
+				end					
+    table.insert(tt,str)
+			else
+  if count ~=3 and count ~= 4 and count~= 2 and count ~= 5 then	
+  		table.insert(tt,line)
+  end
+end
+		end
+	end
+  local final="Click the monitor to receive a rule book, which will allow you to leave this area"
+  local finai="(Once you recieve a book, pray to the goddess)"
+tt[ymax-1] =final
+tt[ymax] = finai
+	return deepcopy(tt)
+end
+
+function looking()
+--	mon.setTextScale(2)
+	local xmax,ymax = mon.getSize()
+	local tc = Draw.emptyScreen(mon,xmax,ymax)
+	Draw.tc(tc,1,1,colors.black,xmax,ymax)
+	Draw.draw(mon,tc,1,1,colors.black,tt2)
+end
+
+tt2 = getAndParseRules()
+function one()
+while true do
+	looking()
+	sleep(15)
+end
+end
+function two()
+  while true do
+    local event = os.pullEvent()
+--    print(event)
+if event == "monitor_touch" then
+        sleep(0.5)
+    rs.setOutput("back",true)
+    sleep(1)
+    rs.setOutput("back",false)
+    sleep(5)
+  
+  else
+  sleep(0)
+end
+  end
+ end
+ 
+ parallel.waitForAll(one,two)

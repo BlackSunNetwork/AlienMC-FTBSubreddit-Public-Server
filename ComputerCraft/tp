@@ -1,0 +1,43 @@
+p = peripheral.wrap("right")
+book_name = "AlienMC Rules"
+cc = peripheral.wrap("bottom")
+
+
+function telePlayer(name)
+  local spawnPos = "-45 66 1"
+  if name ~= nil then
+  redstone.setOutput("front", true)
+  sleep(0.5)
+  redstone.setOutput("front", false)
+  cc.setCommand("tp "..name.." "..spawnPos)
+print("tp "..name.." "..spawnPos)
+    cc.runCommand()
+  cc.setCommand("")
+  end
+end
+
+function checkPlayers()
+  local tab = p.getPlayerNames()
+  for k,v in pairs(tab) do
+    local tab2 = p.getPlayerData(v)
+    local x = tab2.position.x
+    local y = tab2.position.y
+    local z = tab2.position.z
+    if math.sqrt(x*x+y*y+z*z) < 3.5 then
+      for index,item in pairs(tab2.inventory) do
+        if item.name ==book_name then 
+          telePlayer(v)
+        end        
+      end
+    end
+  end
+  return false
+end
+
+while true do
+ if checkPlayers() then 
+   sleep(0)
+ else
+   sleep(1)
+ end
+end

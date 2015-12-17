@@ -1,0 +1,58 @@
+Added:
+AE2 stuff
+Better Storage
+BluePower
+EiraMoticons
+Ender Core
+Immersive Engineering
+Immersive Intergration
+Immibis Microblocks
+Matter Overdrive
+Qmunity Lib
+
+
+Removed:
+AODB
+AppleCore
+Armor Status HUD
+Aroma1997 Core
+Automagy
+Cosmetic Armor
+Damage Indicators
+DecoCraft
+Dense Ores
+Draconic Evolution
+Electrical Age
+Extra TiC
+FoxLib
+Gendustry
+Guide API
+Iguana Tweaks
+Illuminated Bows
+Kitchen Craft
+Logistics Pipes
+Mobius Core
+Modular Armor
+More Chisels
+Natura
+Opis
+Pam's HarvestCraft
+Pneumatic Craft
+Project Red
+Project X
+Random Things
+Recipe Tweaking Core
+Refined Relocation
+Reliquary
+Runic Dungeons
+Sanguimancy
+Super Massive Tech
+Sync
+Tails
+Thaumcraft
+Thaumic Energistics
+Thaumic Exploration
+Thaumic Tinkerer
+TPPI Tweaks
+ttCore
+Twilight Forest

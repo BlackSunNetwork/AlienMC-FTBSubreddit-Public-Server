@@ -1,0 +1,5 @@
+mon = peripheral.wrap("right")
+while true do
+  local event = os.pullEvent()
+  print(event)
+ end

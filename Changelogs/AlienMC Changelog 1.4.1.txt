@@ -1,0 +1,25 @@
+AlienMC 1.4.1 Changelog
+
+Temporarily Removed until bugs fixed:
+Equivalent Exchange 3
+
+Removed:
+Advanced Solar
+Advanced Repulsion System
+Compact Solar Arrays
+Immibis Microblocks
+IndustrialCraft 2
+Nuclear Control
+RedLogic
+
+
+Updated:
+Applied Energistics 2
+ExtraCells
+Immibis Core
+ProjectRed
+ProjectRed-Compatibility
+ProjectRed-Transmission
+ProjectRed-Illumination
+ProjectRed-Expansion
+ProjectRed-Exploration

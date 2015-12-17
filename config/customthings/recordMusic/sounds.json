@@ -1,0 +1,11 @@
+{
+  "records.customthings.no": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "records/no",
+        "stream": true
+      }
+    ]
+  }
+}
