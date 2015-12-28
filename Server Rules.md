@@ -25,4 +25,4 @@ Admins may ban users both for broken rules and any malicious actions towards the
 Appeal bans in slack.
 
 ###We hope you have a fun time!
-###Come join us in Mumble and Slack (info is on our website, AlienMC.co)
+###Come join us in Discord (info is on /r/AlienMC)
