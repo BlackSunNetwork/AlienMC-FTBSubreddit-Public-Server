@@ -65,7 +65,6 @@ OpenComputers-MC1.7.10-1.5.22.46-universal.jar
 OpenEye-0.6-1.7.10-snapshot-145.jar
 OpenModsLib-1.7.10-0.9.jar
 OpenPeripheral-1.7.10-AIO-6.jar
-Practical-Logistics-1.7.10-0.1.0.jar
 ProjectRed-1.7.10-4.7.0pre12.95-Base.jar
 ProjectRed-1.7.10-4.7.0pre12.95-Compat.jar
 ProjectRed-1.7.10-4.7.0pre12.95-Fabrication.jar
