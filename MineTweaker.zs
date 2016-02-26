@@ -1,10 +1,10 @@
 //AlienMC Minetweaker script
 
 val fire = <minecraft:fire>;
-val goldBucket = <TConstruct:buckets:1>;
+val goldBucket = <minechem:minechemBucket.molecule.molecule.cocaine>;
 val enderium = <ThermalFoundation:Storage:12>;
 val star = <minecraft:nether_star>;
-val boots = <PortalGun:LongFallBoots>;
+val boots = <ore:oc:hoverBoots>;
 val invis = <ExtraUtilities:angelRing>;
 val feather = <ExtraUtilities:angelRing:1>;
 val fairy = <ExtraUtilities:angelRing:2>;
@@ -14,7 +14,20 @@ val leather = <minecraft:leather>;
 val soulFragment = <ExtraUtilities:mini-soul>;
 val emeraldBlock = <minecraft:emerald_block>;
 val notchApple = <minecraft:golden_apple:1>;
-val redHeart = <TConstruct:heartCanister:1>;
+val redHeart = <minecraft:apple>;
+val wheat = <minecraft:wheat>;
+val spawnChicken = <minecraft:spawn_egg:93>;
+val spawnCow = <minecraft:spawn_egg:92>;
+val spawnSheep = <minecraft:spawn_egg:91>;
+val spawnPig = <minecraft:spawn_egg:90>;
+val seeds = <minecraft:wheat_seeds>;
+val carrots = <minecraft:carrot>;
+
+//Spawn Eggs since animals won't fuck
+recipes.addShapeless(spawnChicken, [seeds, seeds]);
+recipes.addShaped(spawnCow, [[wheat, wheat, null], [null, null, null], [null, null, null]]);
+recipes.addShaped(spawnSheep, [[wheat, null, null], [wheat, null, null], [null, null, null]]);
+recipes.addShapeless(spawnPig, [carrots, carrots]);
 
 //Angel Rings
 recipes.remove(<ExtraUtilities:angelRing:*>);
@@ -38,15 +51,8 @@ recipes.addShapeless(golden, [<minecraft:gold_nugget>, invis, <minecraft:gold_nu
 recipes.addShaped(soulFragment, [[redHeart, emeraldBlock, redHeart], [emeraldBlock, notchApple, emeraldBlock], [redHeart, emeraldBlock, redHeart]]);
 
 //<chisel:futura>
-recipes.removeShapeless(<chisel:futura>);
-recipes.removeShaped(<chisel:futura>);
+recipes.remove(<chisel:futura>);
 recipes.addShapeless(<chisel:futura>, [<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:redstone>]);
-
-//rftools Disable Dim stuff
-recipes.remove(<rftools:dimensionBuilderBlock:*>);
-recipes.remove(<rftools:emptyDimensionTab:*>);
-recipes.remove(<rftools:dimensionEnscriberBlock>);
-recipes.remove(<rftools:dimensionEditorBlock>);
 
 //MFR Unifier
 recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:dustRedstone>, <minecraft:comparator>, <ore:dustRedstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
@@ -55,15 +61,20 @@ recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:
 recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>], [<ore:dustWood>, null, <ore:dustWood>], [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
 recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>], [<ore:pulpWood>, null, <ore:pulpWood>], [<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>]]);
 
-//Gravel -> Flint
-recipes.addShapeless(<minecraft:flint>, [<minecraft:gravel>]);
+//rftools Disable Dim stuff
+//recipes.remove(<rftools:dimensionBuilderBlock:*>);
+//recipes.remove(<rftools:emptyDimensionTab:*>);
+//recipes.remove(<rftools:dimensionEnscriberBlock>);
+//recipes.remove(<rftools:dimensionEditorBlock>);
 
-//Trowels
-recipes.remove(<Botany:trowelIron:*>);
-recipes.remove(<Botany:trowelDiamond:*>);
+//Disable BC Quarry
+recipes.remove(<BuildCraft|Builders:machineBlock>);
 
-//sand
-recipes.addShapeless(<minecraft:sand>, [<ore:sand>]);
+//Disable Advanced Energy Cube
+recipes.remove(<Calculator:AdvancedPCubeIdle>);
 
-//Title thingy
-recipes.remove(<TravellersGear:simpleGear:6>);
+//Fun stuff - (Add Energy Cube)
+recipes.remove(<Calculator:AlgorithmSeperatorIdle>);
+recipes.addShaped(<Calculator:AlgorithmSeperatorIdle>,[[<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>],[<Calculator:RedstonedAxe>,<Calculator:FlawlessDiamond>,<Calculator:RedstonedAxe>],[<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>]]);
+
+
