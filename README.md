@@ -7,7 +7,7 @@
   <li>AlienMC Subreddit:* [/r/AlienMC](http://www.reddit.com/r/AlienMC)</li>
   <li>Server address: survival.alienmc.co - Port: 25565 (Default)</li>
   <li>FTB Pack: [AlienMC Pack - V2.0.2](http://reddit.com/r/AlienMC)</li>
-  <li>Mumble address: alienmc.co</li>
+  <li>Discord: https://discord.gg/0i6AkK1JH32YQzFF</li>
   <li>Website: http://alienmc.co/</li>
   <li>Slack: http://alienmc.co/slack/</li>
   <li>Github: https://github.com/AlienMC</li>

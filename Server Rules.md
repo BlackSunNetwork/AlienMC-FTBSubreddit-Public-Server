@@ -1,6 +1,6 @@
 ##Server Rules
 
-* No Hacking, glitching, exploiting (If you find a bug or exploit, please inform an admin)
+* No Hacking, glitching, exploiting (If you find a bug or exploit, please inform an admin through Discord/ModMail on reddit)
 
 * No CC programs that create an infinite loop without a sleep function
 
@@ -22,7 +22,7 @@ Stay up to date on feature specific rules via the free books at spawn.
 Each person is only allowed 9 force loaded chunks at one time and only while online.  
 Have common sense, and do your best to be nice to others.  
 Admins may ban users both for broken rules and any malicious actions towards the server.  
-Appeal bans in slack.
+Appeal bans in Discord.
 
 ###We hope you have a fun time!
 ###Come join us in Discord (info is on /r/AlienMC)
