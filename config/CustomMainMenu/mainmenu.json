@@ -1,0 +1,231 @@
+{
+    "images":
+    {
+		"black":
+        {
+            "image" : "mainmenu:textures/bg_menu.png",
+            "posX" : 95,
+            "posY" : -80,
+            "width" : 200,
+            "height" : 1500,
+            "alignment" : "top_left"
+        },
+		"logo":
+        {
+            "image" : "mainmenu:textures/logo.png",
+            "posX" : 95,
+            "posY" : -30,
+            "width" : 475,
+            "height" : 240,
+            "alignment" : "top_left"
+        }
+	
+	},
+    
+    "buttons":
+    {     
+		"singleplayer":
+        {
+            "text" : "menu.singleplayer",
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : -40,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+        "Server Direct Connect":
+        {
+            "text" : "Join the Server",
+            "normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"posX" : 97,
+            "posY" : -20,
+            "width" : 196,
+            "height" : 20,
+            imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+			"texture" : "mainmenu:textures/btn.png",
+            "action" : 
+            {
+                "type" : "connectToServer",
+				"ip" : "survival.alienmc.co"
+            }
+        },	
+
+		"multiplayer":
+        {
+            "text" : "menu.multiplayer",			
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : 0,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "multiplayer"
+            }
+        },
+               
+		"options":
+        {
+            "text" : "menu.options",
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : 50,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+		        
+		"language":
+        {
+            "text" : "options.language",
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : 70,
+            "width" : 196,
+            "height" : 20,
+            "normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			imageWidth : 100,
+			imageHeight : 50,			
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "languages"
+            }
+        },
+                    
+        "quit":
+        {
+            "text" : "menu.quit",
+			"normalTextColor" : 16729344,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : 90,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+			"hoverText" : "No! Don't leave!",
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+		
+        "mods":
+        {
+            "text" : "Mods (#modsloaded#/#modsactive#)",
+			"normalTextColor" : 6710886,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 97,
+            "posY" : 110,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "mods"
+            }
+        },
+        "versionChecker":
+        {
+            "text" : "Version-Checker",
+			"normalTextColor" : 6710886,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 193,
+            "posY" : 100,
+            "width" : 100,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,			
+			"alignment" : "left_center",
+            "wrappedButton" : 404
+        }
+	},
+    
+    "texts":
+    {
+        "mojang":
+        {
+            "text" : "Forge #forgeversion# for Minecraft #mcversion# - Copyright Mojang AB. Do not distribute!",
+            "posX" : 2,
+            "posY" : -10,
+            "color" : 9737471,
+            "alignment" : "bottom_left"
+        },
+        
+		"packTxt":
+        {
+            "action" : 
+            {
+                "type" : "openLink",
+				"link" : "http://www.reddit.com/r/alienmc"
+            },
+            "text" : "AlienMC - 2.2.0 - You Can (Not) Advance",
+            "posX" : 2,
+            "posY" : -25,
+            "color" : 9737471,
+            "hoverTextColor" : 16729344,
+            "alignment" : "bottom_left"
+        }
+    },
+    
+    "other":
+    {
+		
+        "background":
+        {
+            "image" : "",
+            "slideshow":
+            {
+                "images" : [
+                    "mainmenu:scrn/1.png",
+                    "mainmenu:scrn/2.png",
+                    "mainmenu:scrn/3.png",
+                    "mainmenu:scrn/4.png",
+                    "mainmenu:scrn/5.png",
+                    "mainmenu:scrn/6.png"
+                ],
+                "displayDuration" : 100,
+                "fadeDuration" : 40,
+                "shuffle" : true
+            }
+        }
+    }
+}
