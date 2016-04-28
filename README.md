@@ -2,7 +2,7 @@
 <ol>
   <li>Welcome to <a href="http://www.reddit.com/r/feedthebeast">/r/FeedTheBeast's</a> Public Server's Github</li>
 </ol>
-<h1>/r/FeedTheBeast Server Info</h1>
+<h1>Server Info</h1>
 <ol>
   <li><a href="http://www.reddit.com/r/AlienMC">AlienMC Subreddit</a></li>
   <li>Server Address: survival.alienmc.co</li>
