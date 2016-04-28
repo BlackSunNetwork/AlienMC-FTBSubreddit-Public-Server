@@ -12,4 +12,4 @@
   <li>Slack: http://alienmc.co/slack/</li>
   <li>Github: https://github.com/AlienMC</li>-->
 </ol>
-<h1>This server is in no way affiliated with the developers of the Feed The Beast Mod Pack.</h1>
+<h5>This server is in no way affiliated with the developers of the Feed The Beast Mod Pack.</h5>
