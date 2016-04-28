@@ -5,9 +5,9 @@
 <h1>/r/FeedTheBeast Server Info</h1>
 <ol>
   <li><a href="http://www.reddit.com/r/AlienMC">AlienMC Subreddit</a></li>
-  <li>Server address: survival.alienmc.co - Port: 25565 (Default)</li>
+  <li>Server Address: survival.alienmc.co</li>
   <li>FTB Pack Code: PurpleAlienPenguins</li>
-  <li>Discord: https://discord.gg/0i6AkK1JH32YQzFF</li>
+  <li><a href="https://discord.gg/0i6AkK1JH32YQzFF">Discord</a></li>
   <!--<li>Website: http://alienmc.co/</li>
   <li>Slack: http://alienmc.co/slack/</li>
   <li>Github: https://github.com/AlienMC</li>-->
