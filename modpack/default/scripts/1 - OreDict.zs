@@ -21,4 +21,4 @@ blue.add(<Railcraft:ore:4>);
 
 //GT Nether Ores. These are NOT in NEI. This might take a while.
 quartz.add(<gregtech:gt.blockores:1522>);
-
+red.add(<gregtech:gt.blockores:1810>);
