@@ -1,7 +1,7 @@
 //AlienMC Minetweaker script
 
 val fire = <minecraft:fire>;
-val goldBucket = <minechem:minechemBucket.molecule.molecule.cocaine>;
+val goldBucket = <TConstruct:buckets:1>;
 val enderium = <ThermalFoundation:Storage:12>;
 val star = <minecraft:nether_star>;
 val boots = <ore:oc:hoverBoots>;
@@ -15,19 +15,12 @@ val soulFragment = <ExtraUtilities:mini-soul>;
 val emeraldBlock = <minecraft:emerald_block>;
 val notchApple = <minecraft:golden_apple:1>;
 val redHeart = <minecraft:apple>;
-val wheat = <minecraft:wheat>;
-val spawnChicken = <minecraft:spawn_egg:93>;
-val spawnCow = <minecraft:spawn_egg:92>;
-val spawnSheep = <minecraft:spawn_egg:91>;
-val spawnPig = <minecraft:spawn_egg:90>;
-val seeds = <minecraft:wheat_seeds>;
-val carrots = <minecraft:carrot>;
-
-//Spawn Eggs since animals won't fuck
-recipes.addShapeless(spawnChicken, [seeds, seeds]);
-recipes.addShaped(spawnCow, [[wheat, wheat, null], [null, null, null], [null, null, null]]);
-recipes.addShaped(spawnSheep, [[wheat, null, null], [wheat, null, null], [null, null, null]]);
-recipes.addShapeless(spawnPig, [carrots, carrots]);
+val enderQuarry = <ExtraUtilities:enderQuarry>;
+val bcQuarry = <BuildCraft|Builders:machineBlock>;
+val transmitter = <rftools:matterTransmitterBlock>;
+val receiver = <rftools:matterReceiverBlock>;
+val teleporter = <IC2:blockMachine2>;
+val digitalMiner = <Mekanism:MachineBlock:4>;
 
 //Angel Rings
 recipes.remove(<ExtraUtilities:angelRing:*>);
@@ -55,26 +48,23 @@ recipes.remove(<chisel:futura>);
 recipes.addShapeless(<chisel:futura>, [<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:redstone>]);
 
 //MFR Unifier
-recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:dustRedstone>, <minecraft:comparator>, <ore:dustRedstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
+//recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:dustRedstone>, <minecraft:comparator>, <ore:dustRedstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
 
 //Compressed Sawdust
 recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>], [<ore:dustWood>, null, <ore:dustWood>], [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
 recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>], [<ore:pulpWood>, null, <ore:pulpWood>], [<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>]]);
 
-//rftools Disable Dim stuff
-//recipes.remove(<rftools:dimensionBuilderBlock:*>);
-//recipes.remove(<rftools:emptyDimensionTab:*>);
-//recipes.remove(<rftools:dimensionEnscriberBlock>);
-//recipes.remove(<rftools:dimensionEditorBlock>);
+//make things harder
+//Ender Quarry
+recipes.remove(enderQuarry);
+recipes.addShaped(enderQuarry, [[<ExtraUtilities:decorativeBock1:1>, bcQuarry, <ExtraUtilities:decorativeBock1:1>],[<ExtraUtilities:decorativeBock1:11>, <ExtraUtilities:decorativeBock1:12>, <ExtraUtilities:decorativeBock1:11>],[<ExtraUtilities:enderThermicPump>, <minecraft:diamond_pickaxe>, <ExtraUtilities:enderThermicPump>]]);
 
-//Disable BC Quarry
-recipes.remove(<BuildCraft|Builders:machineBlock>);
+//Digital Miner
+recipes.remove(digitalMiner);
+recipes.addShaped(digitalMiner, [[<Mekanism:AtomicAlloy>, <ore:circuitAdvanced>, <Mekanism:AtomicAlloy>], [<Mekanism:MachineBlock:15>, <Mekanism:Robit>, <Mekanism:MachineBlock:15>], [<Mekanism:BasicBlock:8>, bcQuarry, <Mekanism:BasicBlock:8>]]);
 
-//Disable Advanced Energy Cube
-recipes.remove(<Calculator:AdvancedPCubeIdle>);
-
-//Fun stuff - (Add Energy Cube)
-recipes.remove(<Calculator:AlgorithmSeperatorIdle>);
-recipes.addShaped(<Calculator:AlgorithmSeperatorIdle>,[[<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>],[<Calculator:RedstonedAxe>,<Calculator:FlawlessDiamond>,<Calculator:RedstonedAxe>],[<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>,<Calculator:ReinforcedBlock>]]);
-
-
+//rftools teleporters
+recipes.remove(transmitter);
+recipes.remove(receiver);
+recipes.addShaped(transmitter, [[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>],[<minecraft:dustRedstone>, teleporter, <minecraft:dustRedstone>],[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>]]);
+recipes.addShaped(receiver, [[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>],[<minecraft:dustRedstone>, teleporter, <minecraft:dustRedstone>],[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>]]);
