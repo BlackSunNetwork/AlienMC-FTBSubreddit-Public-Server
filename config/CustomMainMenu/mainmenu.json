@@ -197,7 +197,7 @@
                 "type" : "openLink",
 				"link" : "http://www.reddit.com/r/alienmc"
             },
-            "text" : "AlienMC - 2.2.0 - You Can (Not) Advance",
+            "text" : "AlienMC - 2.2.1 - You Can (Not) Advance",
             "posX" : 2,
             "posY" : -25,
             "color" : 9737471,
@@ -220,7 +220,16 @@
                     "mainmenu:scrn/3.png",
                     "mainmenu:scrn/4.png",
                     "mainmenu:scrn/5.png",
-                    "mainmenu:scrn/6.png"
+                    "mainmenu:scrn/6.png",
+                    "mainmenu:scrn/7.png",
+                    "mainmenu:scrn/8.png",
+                    "mainmenu:scrn/9.png",
+                    "mainmenu:scrn/10.png",
+                    "mainmenu:scrn/11.png",
+                    "mainmenu:scrn/12.png",
+                    "mainmenu:scrn/13.png",
+                    "mainmenu:scrn/14.png",
+                    "mainmenu:scrn/15.png"
                 ],
                 "displayDuration" : 100,
                 "fadeDuration" : 40,
