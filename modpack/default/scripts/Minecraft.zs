@@ -6,7 +6,7 @@ furnace.addRecipe(<minecraft:coal:1>, <ore:logWood>);
 recipes.addShapeless(<minecraft:diamond_block>, [<minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>, <minecraft:diamond>]);
 recipes.addShaped(<minecraft:bucket>, [[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>], [null, <minecraft:iron_ingot>, null>]]);
 recipes.addShaped(<minecraft:glowstone>, [[<minecraft:glowstone_dust>, <minecraft:glowstone_dust>], [<minecraft:glowstone_dust>, <minecraft:glowstone_dust>]]);
-recipes.addShaped(<minecraft:iron_bars> * 16, [[<minecraft:iron_bars>, <minecraft:iron_bars>, <minecraft:iron_bars>], [<minecraft:iron_bars>, <minecraft:iron_bars>, <minecraft:iron_bars>]]);
+recipes.addShaped(<minecraft:iron_bars> * 16, [[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>], [<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>]]);
 recipes.addShapeless(<minecraft:emerald_block>, [<minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>, <minecraft:emerald>]);
 recipes.addShapeless(<minecraft:redstone_block>, [<minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>, <minecraft:redstone>]);
 recipes.addShaped(<minecraft:hopper>, [[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>], [<minecraft:iron_ingot>, <minecraft:chest>, <minecraft:iron_ingot>], [null, <minecraft:iron_ingot>, null>]]);
