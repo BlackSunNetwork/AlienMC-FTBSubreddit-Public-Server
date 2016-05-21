@@ -47,6 +47,7 @@ Found creative tab: tabMekanism
 Found creative tab: MineFactory Reloaded
 Found creative tab: tabOpenBlocks
 Found creative tab: OpenComputers
+Found creative tab: Power Converters
 Found creative tab: Practical Logistics
 Found creative tab: TConstructBlocks
 Found creative tab: core
@@ -70,6 +71,7 @@ Found creative tab: TConstructParts
 Found creative tab: TConstructTools
 Found creative tab: TConstructMaterials
 Found creative tab: TConstructEquipables
+Found creative tab: TMechworks
 Found creative tab: thaumcraft
 Found creative tab: ThaumicTinkerer
 Found creative tab: brewing
@@ -84,6 +86,7 @@ Found creative tab: thermalfoundation.creativeTabArmor
 Found creative tab: thermalfoundation.creativeTabTools
 Found creative tab: ztones
 Found creative tab: bdew.ae2stuff
+Found creative tab: ae2wct
 Found creative tab: appliedenergistics2
 Found creative tab: appliedenergistics2.facades
 Found creative tab: armourersworkshop
@@ -164,17 +167,17 @@ override called. Params: Mekanism, GlowPanel, 0
 Regex match found! Mekanism:GlowPanel matches Mekanism:GlowPanel.
 Found ItemStack Mekanism:GlowPanel. 64xitem.GlowPanel@0
 Loading: ForgeMicroblock.js
-getRandomMaterial called. Returned: Mekanism:BasicBlock_14
-obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.ForgeMicroblockObject). Params: 1,2,4,257,258,260,513,514,516,769,770,772, Mekanism:BasicBlock_14
+getRandomMaterial called. Returned: AWWayofTime:ritualStone
+obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.ForgeMicroblockObject). Params: 1,2,4,257,258,260,513,514,516,769,770,772, AWWayofTime:ritualStone
 Loading: ExtraUtilities.js
 override called. Params: ExtraUtilities, drum, 0,1
 Regex match found! ExtraUtilities:drum matches ExtraUtilities:drum.
 Found ItemStack ExtraUtilities:drum. 64xtile.extrautils:drum@0
-getRandomMaterial called. Returned: Mekanism:CardboardBox
-obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.ExtraUtilitiesObject). Params: 1,2,3, Mekanism:CardboardBox
+getRandomMaterial called. Returned: AWWayofTime:AlchemicalWizardrybloodRune_5
+obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.ExtraUtilitiesObject). Params: 1,2,3, AWWayofTime:AlchemicalWizardrybloodRune_5
 Loading: BuildCraft.js
-getFacadesSize called. Returned: 3738
-obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.BCObject). Params: 1865
+getFacadesSize called. Returned: 3739
+obliterate_microblocks called (version in info.inpureprojects.core.NEI.gtfoMicroblocks.ScriptObjects.BCObject). Params: 263
 Loading: Bibliocraft.js
 override called. Params: BiblioCraft, *, 0
 Regex match found! BiblioCraft:* matches BiblioCraft:Armor Stand.
@@ -311,7 +314,7 @@ Loading: AppliedEnergistics2.js
 getFacadeItem called. Returned: appliedenergistics2:item.ItemFacade
 getSubTypes called.
 getNumberOfTypes called. Returned: 2830
-override called. Params: appliedenergistics2, item.ItemFacade, 52
+override called. Params: appliedenergistics2, item.ItemFacade, 977
 Regex match found! appliedenergistics2:item.ItemFacade matches appliedenergistics2:item.ItemFacade.
 Found ItemStack appliedenergistics2:item.ItemFacade. 64xitem.appliedenergistics2.ItemFacade@0
 Loading: Tcon.js

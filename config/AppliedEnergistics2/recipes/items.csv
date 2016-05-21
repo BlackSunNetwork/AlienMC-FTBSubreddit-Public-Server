@@ -5900,7 +5900,7 @@ extracells:vibrantchamberfluid, Fluid Vibration Chamber
 ExtraUtilities:chestMini, Mini-Chest
 ExtraUtilities:chestFull, Slightly Larger Chest
 ExtraUtilities:enderCollector, Ender Collector
-ExtraUtilities:endConstructor:0, QED (Quadratic Equation Device)
+ExtraUtilities:endConstructor:0, QED (Quacky Ender Device)
 ExtraUtilities:endConstructor:2, Ender-Flux Crystal
 ExtraUtilities:endMarker, Ender-Marker
 ExtraUtilities:curtains, Blackout Curtains
@@ -6270,40 +6270,40 @@ ExtraUtilities:etherealglass:3, Ethereal Glass (Inverted)
 ExtraUtilities:etherealglass:4, Ineffable Glass (Inverted)
 ExtraUtilities:etherealglass:5, Dark Ethereal Glass (Inverted)
 FlatSigns:blockFlatSign, Sign
-ThaumicTinkerer:aspectAnalyzer, Aspectalyzer
-ThaumicTinkerer:bedrockPortal, Bedrock Portal
-ThaumicTinkerer:repairer, Thaumic Restorer
-ThaumicTinkerer:infusedFarmland, tile.infusedFarmland.name
-ThaumicTinkerer:fireWater, Aqua Imbued Fire
-ThaumicTinkerer:Levitational Locomotive, Levitational Locomotive
-ThaumicTinkerer:darkQuartzStairs, Smokey Quartz Stairs
-ThaumicTinkerer:spawner, Tablet of Necromancy
-ThaumicTinkerer:fireAir, Aer Imbued Fire
-ThaumicTinkerer:fireChaos, Perditio Imbued Fire
 ThaumicTinkerer:forcefield, Forcefield
+ThaumicTinkerer:funnel, Essentia Funnel
 ThaumicTinkerer:Levitational Locomotive Relay, Levitational Locomotive Relay
-ThaumicTinkerer:animationTablet, Dynamism Tablet
-ThaumicTinkerer:fireOrder, Ordo Imbued Fire
-ThaumicTinkerer:enchanter, Osmotic Enchanter
 ThaumicTinkerer:dislocator, Transvector Dislocator
-ThaumicTinkerer:magnet:0, Kinetic Attractor
-ThaumicTinkerer:magnet:1, Corporeal Attractor
-ThaumicTinkerer:fireFire, Ignis Imbued Fire
+ThaumicTinkerer:golemConnector, Golem Connector
+ThaumicTinkerer:fireOrder, Ordo Imbued Fire
+ThaumicTinkerer:platform, Ethereal Platform
+ThaumicTinkerer:fireAir, Aer Imbued Fire
+ThaumicTinkerer:warpGate, Celestial Gateway
+ThaumicTinkerer:fireWater, Aqua Imbued Fire
+ThaumicTinkerer:repairer, Thaumic Restorer
 ThaumicTinkerer:darkQuartzSlab:0, Smokey Quartz Slab
 ThaumicTinkerer:darkQuartzSlabFull:0, Smokey Quartz Slab
-ThaumicTinkerer:platform, Ethereal Platform
-ThaumicTinkerer:nitorGas, tile.nitorGas.name
-ThaumicTinkerer:interface, Transvector Interface
-ThaumicTinkerer:funnel, Essentia Funnel
-ThaumicTinkerer:gaseousShadow, tile.gaseousShadow.name
-ThaumicTinkerer:gaseousLight, tile.gaseousLight.name
-ThaumicTinkerer:infusedGrainBlock, tile.infusedGrainBlock.name
-ThaumicTinkerer:golemConnector, Golem Connector
 ThaumicTinkerer:fireEarth, Terra Imbued Fire
+ThaumicTinkerer:animationTablet, Dynamism Tablet
+ThaumicTinkerer:gaseousLight, tile.gaseousLight.name
+ThaumicTinkerer:aspectAnalyzer, Aspectalyzer
+ThaumicTinkerer:fireChaos, Perditio Imbued Fire
+ThaumicTinkerer:Levitational Locomotive, Levitational Locomotive
+ThaumicTinkerer:infusedGrainBlock, tile.infusedGrainBlock.name
+ThaumicTinkerer:spawner, Tablet of Necromancy
+ThaumicTinkerer:magnet:0, Kinetic Attractor
+ThaumicTinkerer:magnet:1, Corporeal Attractor
+ThaumicTinkerer:darkQuartzStairs, Smokey Quartz Stairs
+ThaumicTinkerer:fireFire, Ignis Imbued Fire
+ThaumicTinkerer:bedrockPortal, Bedrock Portal
+ThaumicTinkerer:gaseousShadow, tile.gaseousShadow.name
+ThaumicTinkerer:interface, Transvector Interface
 ThaumicTinkerer:darkQuartz:0, Block of Smokey Quartz
 ThaumicTinkerer:darkQuartz:1, Chiseled Smokey Quartz Block
 ThaumicTinkerer:darkQuartz:2, Pillar Smokey Quartz Block
-ThaumicTinkerer:warpGate, Celestial Gateway
+ThaumicTinkerer:infusedFarmland, tile.infusedFarmland.name
+ThaumicTinkerer:enchanter, Osmotic Enchanter
+ThaumicTinkerer:nitorGas, tile.nitorGas.name
 ForbiddenMagic:ArcaneCake, Thaumic Cake
 ForbiddenMagic:WrathCage, Wrath Cage
 ForbiddenMagic:InkFlower, Umbral Rose
@@ -10241,17 +10241,20 @@ Mekanism:BasicBlock:2, Refined Obsidian
 Mekanism:BasicBlock:3, Charcoal Block
 Mekanism:BasicBlock:4, Refined Glowstone
 Mekanism:BasicBlock:5, Steel Block
-Mekanism:BasicBlock:6, Bin
+Mekanism:BasicBlock:6, Basic Bin
+Mekanism:BasicBlock:6, Advanced Bin
+Mekanism:BasicBlock:6, Elite Bin
+Mekanism:BasicBlock:6, Ultimate Bin
 Mekanism:BasicBlock:7, Teleporter Frame
 Mekanism:BasicBlock:8, Steel Casing
 Mekanism:BasicBlock:9, Dynamic Tank
-Mekanism:BasicBlock:10, Dynamic Glass
+Mekanism:BasicBlock:10, Structural Glass
 Mekanism:BasicBlock:11, Dynamic Valve
 Mekanism:BasicBlock:12, Copper Block
 Mekanism:BasicBlock:13, Tin Block
-Mekanism:BasicBlock:14, Solar Evaporation Controller
-Mekanism:BasicBlock:15, Solar Evaporation Valve
-Mekanism:BasicBlock2:0, Solar Evaporation Block
+Mekanism:BasicBlock:14, Thermal Evaporation Controller
+Mekanism:BasicBlock:15, Thermal Evaporation Valve
+Mekanism:BasicBlock2:0, Thermal Evaporation Block
 Mekanism:BasicBlock2:1, Induction Casing
 Mekanism:BasicBlock2:2, Induction Port
 Mekanism:BasicBlock2:3, Basic Induction Cell
@@ -10262,29 +10265,21 @@ Mekanism:BasicBlock2:4, Basic Induction Provider
 Mekanism:BasicBlock2:4, Advanced Induction Provider
 Mekanism:BasicBlock2:4, Elite Induction Provider
 Mekanism:BasicBlock2:4, Ultimate Induction Provider
+Mekanism:BasicBlock2:5, Superheating Element
+Mekanism:BasicBlock2:6, Pressure Disperser
+Mekanism:BasicBlock2:7, Boiler Casing
+Mekanism:BasicBlock2:8, Boiler Valve
+Mekanism:BasicBlock2:9, Security Desk
 Mekanism:OreBlock:0, Osmium Ore
 Mekanism:OreBlock:1, Copper Ore
 Mekanism:OreBlock:2, Tin Ore
 Mekanism:EnergyCube, tile.EnergyCube.name
 Mekanism:ObsidianTNT, Obsidian TNT
 Mekanism:BoundingBlock, Bounding Block
-Mekanism:GasTank:100, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
-Mekanism:GasTank:1, Gas Tank
+Mekanism:GasTank:0, Basic Gas Tank
+Mekanism:GasTank:0, Advanced Gas Tank
+Mekanism:GasTank:0, Elite Gas Tank
+Mekanism:GasTank:0, Ultimate Gas Tank
 Mekanism:CardboardBox, Cardboard Box
 Mekanism:PlasticBlock:0, §8Black Plastic Block
 Mekanism:PlasticBlock:1, §cRed Plastic Block
@@ -10383,6 +10378,24 @@ Mekanism:PlasticFence:13, §dMagenta Plastic Barrier
 Mekanism:PlasticFence:14, §6Orange Plastic Barrier
 Mekanism:PlasticFence:15, §fWhite Plastic Barrier
 Mekanism:SaltBlock, Salt Block
+MekanismGenerators:Generator:0, Heat Generator
+MekanismGenerators:Generator:1, Solar Generator
+MekanismGenerators:Generator:3, Gas-Burning Generator
+MekanismGenerators:Generator:4, Bio-Generator
+MekanismGenerators:Generator:5, Advanced Solar Generator
+MekanismGenerators:Generator:6, Wind Generator
+MekanismGenerators:Generator:7, Turbine Rotor
+MekanismGenerators:Generator:8, Rotational Complex
+MekanismGenerators:Generator:9, Electromagnetic Coil
+MekanismGenerators:Generator:10, Turbine Casing
+MekanismGenerators:Generator:11, Turbine Valve
+MekanismGenerators:Generator:12, Turbine Vent
+MekanismGenerators:Reactor:0, Reactor Controller
+MekanismGenerators:Reactor:1, Reactor Frame
+MekanismGenerators:Reactor:3, Reactor Port
+MekanismGenerators:Reactor:4, Reactor Logic Adapter
+MekanismGenerators:ReactorGlass:0, Reactor Glass
+MekanismGenerators:ReactorGlass:1, Laser Focus Matrix
 ObsidiPlates:ObsidianPressurePlate:0, tile.pressurePlate.OBSIDIAN.name
 ObsidiPlates:ObsidianPressurePlate:8, tile.pressurePlate.OBSIDIAN.hidden.name
 ObsidiPlates:ObsidianPressurePlate:2, tile.pressurePlate.OBSIDIAN.silent.name
@@ -10787,6 +10800,22 @@ ThermalDynamics:ThermalDynamics_32:6, Fluctuating Itemduct
 ThermalDynamics:ThermalDynamics_32:7, Fluctuating Itemduct (Opaque)
 ThermalDynamics:ThermalDynamics_48:0, Structuralduct (Opaque)
 ThermalDynamics:ThermalDynamics_48:1, Luxduct
+ThermalDynamics:ThermalDynamics_64:0, Viaduct
+ThermalDynamics:ThermalDynamics_64:1, Long Range Viaduct
+ThermalDynamics:ThermalDynamics_64:2, Long Range Linking Viaduct
+ThermalDynamics:ThermalDynamics_64:3, Viaduct (Untreated)
+TMechworks:RedstoneMachine:0, Drawbridge
+TMechworks:RedstoneMachine:1, Igniter
+TMechworks:RedstoneMachine:2, Advanced Drawbridge
+TMechworks:RedstoneMachine:3, Extended Drawbridge
+TMechworks:Dynamo, Dynamo
+TMechworks:SignalBus, tile.tmechworks.signalbus.name
+TMechworks:SignalTerminal, tile.tmechworks.signalterminal.name
+TMechworks:MeshFilter:0, Empty Mesh Filter
+TMechworks:MeshFilter:1, Wide Mesh Filter
+TMechworks:MeshFilter:2, Slat Mesh Filter
+TMechworks:MeshFilter:3, Mesh Filter
+TMechworks:MeshFilter:4, Fine Mesh Filter
 witchery:belladonna, Belladonna
 witchery:mandrake, Mandrake
 witchery:artichoke, Water Artichoke
@@ -14410,6 +14439,7 @@ armourersWorkshop:shadeNoiseTool, Shade Noise Tool
 armourersWorkshop:hueTool, Hue Tool
 armourersWorkshop:mannequinTool, Mannequin Tool
 armourersWorkshop:dyeBottle, Dye Bottle
+armourersWorkshop:armourersHammer, Armourers Hammer
 armourersWorkshop:armourContainer, Armour Container
 armourersWorkshop:armourContainerHead, Head Armour Container
 armourersWorkshop:armourContainerChest, Chest Armour Container
@@ -14567,6 +14597,23 @@ ThermalFoundation:material:1026, Blitz Rod
 ThermalFoundation:material:1027, Blitz Powder
 ThermalFoundation:material:1028, Basalz Rod
 ThermalFoundation:material:1029, Basalz Powder
+ThermalFoundation:tool.shearsWood, Wood Shears
+ThermalFoundation:tool.sickleWood, Wood Sickle
+ThermalFoundation:tool.shearsStone, Stone Shears
+ThermalFoundation:tool.fishingRodStone, Stone Fishing Rod
+ThermalFoundation:tool.sickleStone, Stone Sickle
+ThermalFoundation:tool.bowStone, Stone Reinforced Bow
+ThermalFoundation:tool.fishingRodIron, Iron Fishing Rod
+ThermalFoundation:tool.sickleIron, Iron Sickle
+ThermalFoundation:tool.bowIron, Iron Reinforced Bow
+ThermalFoundation:tool.shearsDiamond, Diamond Shears
+ThermalFoundation:tool.fishingRodDiamond, Diamond Fishing Rod
+ThermalFoundation:tool.sickleDiamond, Diamond Sickle
+ThermalFoundation:tool.bowDiamond, Diamond Reinforced Bow
+ThermalFoundation:tool.shearsGold, Gold Shears
+ThermalFoundation:tool.fishingRodGold, Gold Fishing Rod
+ThermalFoundation:tool.sickleGold, Gold Sickle
+ThermalFoundation:tool.bowGold, Gold Reinforced Bow
 ThermalFoundation:armor.helmetCopper, Copper Helmet
 ThermalFoundation:armor.plateCopper, Copper Chestplate
 ThermalFoundation:armor.legsCopper, Copper Leggings
@@ -23289,6 +23336,10 @@ Mekanism:PartTransmitter:14, Elite Logistical Transporter
 Mekanism:PartTransmitter:15, Ultimate Logistical Transporter
 Mekanism:PartTransmitter:16, Restrictive Transporter
 Mekanism:PartTransmitter:17, Diversion Transporter
+Mekanism:PartTransmitter:18, Basic Thermodynamic Conductor
+Mekanism:PartTransmitter:19, Advanced Thermodynamic Conductor
+Mekanism:PartTransmitter:20, Elite Thermodynamic Conductor
+Mekanism:PartTransmitter:21, Ultimate Thermodynamic Conductor
 Mekanism:ElectricBow, Electric Bow
 Mekanism:Dust:0, Iron Dust
 Mekanism:Dust:1, Gold Dust
@@ -23308,6 +23359,7 @@ Mekanism:EnergyTablet, Energy Tablet
 Mekanism:SpeedUpgrade, Speed Upgrade
 Mekanism:EnergyUpgrade, Energy Upgrade
 Mekanism:FilterUpgrade, Filter Upgrade
+Mekanism:MufflingUpgrade, Muffling Upgrade
 Mekanism:GasUpgrade, Gas Upgrade
 Mekanism:Robit, Robit
 Mekanism:AtomicDisassembler, Atomic Disassembler
@@ -23385,7 +23437,8 @@ Mekanism:Crystal:5, Silver Crystal
 Mekanism:Crystal:6, Lead Crystal
 Mekanism:FreeRunners, Free Runners
 Mekanism:ArmoredJetpack, Armored Jetpack
-Mekanism:FilterCard, Filter Card
+Mekanism:ConfigurationCard, Configuration Card
+Mekanism:CraftingFormula, Crafting Formula
 Mekanism:SeismicReader, Seismic Reader
 Mekanism:Substrate, Substrate
 Mekanism:Polyethene:0, HDPE Pellet
@@ -23416,11 +23469,13 @@ Mekanism:FactoryInstaller:1, Advanced Factory Installer
 Mekanism:FactoryInstaller:2, Elite Factory Installer
 Mekanism:OtherDust:0, Diamond Dust
 Mekanism:OtherDust:1, Steel Dust
-Mekanism:OtherDust:2, Lead Dust
 Mekanism:OtherDust:3, Sulfur Dust
 Mekanism:OtherDust:4, Lithium Dust
 Mekanism:OtherDust:5, Refined Obsidian Dust
 Mekanism:OtherDust:6, Obsidian Dust
+MekanismGenerators:SolarPanel, Solar Panel
+MekanismGenerators:Hohlraum, Hohlraum
+MekanismGenerators:TurbineBlade, Turbine Blade
 MekanismTools:WoodPaxel, Wood Paxel
 MekanismTools:StonePaxel, Stone Paxel
 MekanismTools:IronPaxel, Iron Paxel
@@ -27562,22 +27617,22 @@ ThermalDynamics:cover:0, Dark Ethereal Glass Cover
 ThermalDynamics:cover:0, Ethereal Glass (Inverted) Cover
 ThermalDynamics:cover:0, Ineffable Glass (Inverted) Cover
 ThermalDynamics:cover:0, Dark Ethereal Glass (Inverted) Cover
-ThermalDynamics:cover:0, Bedrock Portal Cover
-ThermalDynamics:cover:0, Aqua Imbued Fire Cover
-ThermalDynamics:cover:0, Smokey Quartz Stairs Cover
-ThermalDynamics:cover:0, Aer Imbued Fire Cover
-ThermalDynamics:cover:0, Perditio Imbued Fire Cover
 ThermalDynamics:cover:0, Ordo Imbued Fire Cover
-ThermalDynamics:cover:0, Ignis Imbued Fire Cover
+ThermalDynamics:cover:0, Aer Imbued Fire Cover
+ThermalDynamics:cover:0, Aqua Imbued Fire Cover
 ThermalDynamics:cover:0, Smokey Quartz Slab Cover
 ThermalDynamics:cover:0, Smokey Quartz Slab Cover
-ThermalDynamics:cover:0, tile.nitorGas.name Cover
-ThermalDynamics:cover:0, tile.gaseousShadow.name Cover
-ThermalDynamics:cover:0, tile.gaseousLight.name Cover
 ThermalDynamics:cover:0, Terra Imbued Fire Cover
+ThermalDynamics:cover:0, tile.gaseousLight.name Cover
+ThermalDynamics:cover:0, Perditio Imbued Fire Cover
+ThermalDynamics:cover:0, Smokey Quartz Stairs Cover
+ThermalDynamics:cover:0, Ignis Imbued Fire Cover
+ThermalDynamics:cover:0, Bedrock Portal Cover
+ThermalDynamics:cover:0, tile.gaseousShadow.name Cover
 ThermalDynamics:cover:0, Block of Smokey Quartz Cover
 ThermalDynamics:cover:0, Chiseled Smokey Quartz Block Cover
 ThermalDynamics:cover:0, Pillar Smokey Quartz Block Cover
+ThermalDynamics:cover:0, tile.nitorGas.name Cover
 ThermalDynamics:cover:0, Thaumic Cake Cover
 ThermalDynamics:cover:0, Umbral Rose Cover
 ThermalDynamics:cover:0, Nether Star Block Cover
@@ -28091,6 +28146,7 @@ ThermalDynamics:cover:0, Refined Glowstone Cover
 ThermalDynamics:cover:0, Steel Block Cover
 ThermalDynamics:cover:0, Teleporter Frame Cover
 ThermalDynamics:cover:0, Steel Casing Cover
+ThermalDynamics:cover:0, Copper Block Cover
 ThermalDynamics:cover:0, Tin Block Cover
 ThermalDynamics:cover:0, Osmium Ore Cover
 ThermalDynamics:cover:0, Copper Ore Cover
@@ -28277,6 +28333,11 @@ ThermalDynamics:cover:0, Birch Trim Cover
 ThermalDynamics:cover:0, Jungle Trim Cover
 ThermalDynamics:cover:0, Acacia Trim Cover
 ThermalDynamics:cover:0, Dark Oak Trim Cover
+ThermalDynamics:cover:0, Empty Mesh Filter Cover
+ThermalDynamics:cover:0, Wide Mesh Filter Cover
+ThermalDynamics:cover:0, Slat Mesh Filter Cover
+ThermalDynamics:cover:0, Mesh Filter Cover
+ThermalDynamics:cover:0, Fine Mesh Filter Cover
 ThermalDynamics:cover:0, Belladonna Cover
 ThermalDynamics:cover:0, Mandrake Cover
 ThermalDynamics:cover:0, Water Artichoke Cover
@@ -28414,6 +28475,13 @@ ThermalDynamics:retriever:2, Reinforced Retriever
 ThermalDynamics:retriever:3, Signalum Retriever
 ThermalDynamics:retriever:4, Resonant Retriever
 ThermalDynamics:relay:0, Redstone Relay
+TMechworks:LengthWire, Length of Wire
+TMechworks:SpoolWire:0, Spool of Wire
+ae2wct:infinityBoosterCard, Infinity Booster Card
+ae2wct:infinityBoosterIcon, item.infinityBoosterIcon.name
+ae2wct:wirelessCraftingTerminal, Wireless Crafting Terminal
+ae2wct:magnetCard, Magnet Card
+ae2wct:boosterBG, item.boosterBG.name
 witchery:ingredient:0, Candelabra
 witchery:ingredient:1, Chalice
 witchery:ingredient:2, Chalice (Filled)

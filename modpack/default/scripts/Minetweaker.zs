@@ -48,7 +48,7 @@ recipes.remove(<chisel:futura>);
 recipes.addShapeless(<chisel:futura>, [<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:redstone>]);
 
 //MFR Unifier
-//recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:dustRedstone>, <minecraft:comparator>, <ore:dustRedstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
+//recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:redstone>, <minecraft:comparator>, <ore:redstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
 
 //Compressed Sawdust
 recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>], [<ore:dustWood>, null, <ore:dustWood>], [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
@@ -57,7 +57,7 @@ recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:pulpWood>, <ore:pulpWo
 //make things harder
 //Ender Quarry
 recipes.remove(enderQuarry);
-recipes.addShaped(enderQuarry, [[<ExtraUtilities:decorativeBock1:1>, bcQuarry, <ExtraUtilities:decorativeBock1:1>],[<ExtraUtilities:decorativeBock1:11>, <ExtraUtilities:decorativeBock1:12>, <ExtraUtilities:decorativeBock1:11>],[<ExtraUtilities:enderThermicPump>, <minecraft:diamond_pickaxe>, <ExtraUtilities:enderThermicPump>]]);
+recipes.addShaped(enderQuarry, [[<ExtraUtilities:decorativeBlock1:1>, bcQuarry, <ExtraUtilities:decorativeBlock1:1>],[<ExtraUtilities:decorativeBlock1:11>, <ExtraUtilities:decorativeBlock1:12>, <ExtraUtilities:decorativeBlock1:11>],[<ExtraUtilities:enderThermicPump>, <minecraft:diamond_pickaxe>, <ExtraUtilities:enderThermicPump>]]);
 
 //Digital Miner
 recipes.remove(digitalMiner);
@@ -66,5 +66,5 @@ recipes.addShaped(digitalMiner, [[<Mekanism:AtomicAlloy>, <ore:circuitAdvanced>,
 //rftools teleporters
 recipes.remove(transmitter);
 recipes.remove(receiver);
-recipes.addShaped(transmitter, [[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>],[<minecraft:dustRedstone>, teleporter, <minecraft:dustRedstone>],[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>]]);
-recipes.addShaped(receiver, [[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>],[<minecraft:dustRedstone>, teleporter, <minecraft:dustRedstone>],[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>]]);
+recipes.addShaped(transmitter, [[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>],[<minecraft:redstone>, teleporter, <minecraft:redstone>],[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>]]);
+recipes.addShaped(receiver, [[<minecraft:iron_ingot>, <rftools:machineFrame>, <minecraft:iron_ingot>],[<minecraft:redstone>, teleporter, <minecraft:redstone>],[<minecraft:ender_pearl>, <minecraft:ender_pearl>, <minecraft:ender_pearl>]]);
