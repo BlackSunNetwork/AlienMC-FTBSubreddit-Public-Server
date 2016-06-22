@@ -11,6 +11,8 @@
 * No lag machines - Do not allow farms/machines to back up or spew.
 
 * No Afking for long periods or making Anti-Afk setups
+ 
+* No building within 100 blocks of spawn. (You can ask a staff member for an exception)
 
 * No Automated mining in the Overworld or Nether. (Yes you can use pumps)
 
