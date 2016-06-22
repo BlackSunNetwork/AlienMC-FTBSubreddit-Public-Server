@@ -17,7 +17,8 @@
 * No sexism, racism, homophobia or any type of hate speech!
 
 This is a safe space for everyone regardless of race, sexual orientation, or gender identity.
-Chunks can be claimed and loaded using FTB Utils. Loaded chunks will only be active while you are online.  
+Chunks can be claimed and loaded using FTB Utils. 
+Loaded chunks will only be active while you are online.  
 Have common sense, and do your best to be nice to others.  
 Admins may ban users both for broken rules and any malicious actions towards the server.  
 Appeal bans in Discord or via modmail.
