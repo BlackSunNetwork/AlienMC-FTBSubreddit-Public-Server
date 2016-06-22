@@ -8,21 +8,19 @@
 
 * No Griefing
 
-* No Possession/use of Banned Items
-
 * No lag machines - Do not allow farms/machines to back up or spew.
 
-* No Afking for long periods to get around the chunk loading rule (Anti-Afk setups)
+* No Afking for long periods or making Anti-Afk setups
 
-* No Automated mining in the Overworld or Nether.
+* No Automated mining in the Overworld or Nether. (Yes you can use pumps)
 
-* No racial or sexual insults or slurs.
+* No sexism, racism, homophobia or any type of hate speech!
 
-Stay up to date on feature specific rules via the free books at spawn.  
-Each person is only allowed 9 force loaded chunks at one time and only while online.  
+This is a safe space for everyone regardless of race, sexual orientation, or gender identity.
+Chunks can be claimed and loaded using FTB Utils. Loaded chunks will only be active while you are online.  
 Have common sense, and do your best to be nice to others.  
 Admins may ban users both for broken rules and any malicious actions towards the server.  
-Appeal bans in Discord.
+Appeal bans in Discord or via modmail.
 
 ###We hope you have a fun time!
 ###Come join us in Discord (info is on /r/AlienMC)
