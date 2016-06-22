@@ -1,6 +1,6 @@
 ##Server Rules
 
-* No Hacking, glitching, exploiting (If you find a bug or exploit, please inform an admin through Discord/ModMail on reddit)
+* No Hacking, glitching, exploiting 
 
 * No CC programs that create an infinite loop without a sleep function
 
@@ -12,13 +12,14 @@
 
 * No Afking for long periods or making Anti-Afk setups
  
-* No building within 100 blocks of spawn's claimed chunks. (You can ask a staff member for an exception)
+* No building within 100 blocks of spawn's chunks. (You can ask a staff member for an exception)
 
 * No Automated mining in the Overworld or Nether. (Yes you can use pumps)
 
 * No sexism, racism, homophobia or any type of hate speech!
 
 This is a safe space for everyone regardless of race, sexual orientation, or gender identity.
+If you find a bug or exploit, please inform an admin through Discord/ModMail on reddit.
 Chunks can be claimed and loaded using FTB Utils. 
 Loaded chunks will only be active while you are online.  
 Have common sense, and do your best to be nice to others.  
