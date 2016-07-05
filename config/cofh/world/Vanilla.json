@@ -37,9 +37,9 @@
         "template": "uniform",
         "block": "coal_ore",
         "material": "stone",
-        "clusterSize": 16,
-        "numClusters": 20,
-        "minHeight": 0,
+        "clusterSize": 10,
+        "numClusters": 12,
+        "minHeight": 50,
         "maxHeight": 128,
         "retrogen": "true",
         "biomeRestriction": "none",
@@ -55,8 +55,8 @@
         "block": "iron_ore",
         "material": "minecraft:stone",
         "clusterSize": 8,
-        "numClusters": 20,
-        "minHeight": 0,
+        "numClusters": 10,
+        "minHeight": 34,
         "maxHeight": 64,
         "retrogen": "true",
         "biomeRestriction": "none",
@@ -72,7 +72,7 @@
         "block": "gold_ore",
         "material": "minecraft:stone",
         "clusterSize": 8,
-        "numClusters": 2,
+        "numClusters": 5,
         "minHeight": 0,
         "maxHeight": 32,
         "retrogen": "true",
@@ -105,8 +105,8 @@
         "template": "uniform",
         "block": "diamond_ore",
         "material": "minecraft:stone",
-        "clusterSize": 7,
-        "numClusters": 1,
+        "clusterSize": 9,
+        "numClusters": 2,
         "minHeight": 0,
         "maxHeight": 16,
         "retrogen": "true",
@@ -123,7 +123,7 @@
         "block": "lapis_ore",
         "material": "minecraft:stone",
         "clusterSize": 6,
-        "numClusters": 1,
+        "numClusters": 2,
         "meanHeight": 16,
         "maxVariance": 16,
         "retrogen": "true",
@@ -144,11 +144,11 @@
         "minHeight": 10,
         "maxHeight": 118,
         "retrogen": "true",
-        "biomeRestriction": "whitelist",
-        "biomes": [
-            {"type": "dictionary", "entry": "NETHER"}
-        ],
-        "dimensionRestriction": "none",
-        "dimensions": []
+        "biomeRestriction": "none",
+        "biomes": [],
+        "dimensionRestriction": "whitelist",
+        "dimensions": [
+            -1
+        ]
     }
 }
