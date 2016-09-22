@@ -1,0 +1,14 @@
+§1§lAMC 2.4 Intro
+Welcome to AlienMc 2.4. 
+This time around, we've decided to spice things up a bit.
+NEI use is really important for this version of the pack because we've changed many recipes. 
+The changes are meant to be somewhat more challenging, yet still fun.
+You've probably noticed that Project E is in the pack. Don't worry, you won't have to use it to be on the same level as other players.
+Project E is gated to be later game, and only building blocks, and some items that are unimportant to progression have EMC.
+"But Project E is like playing in creative mode" Yeah. For building blocks. You'll be able to build nicer things more easily.
+We've added Spice of Life. The diminishing returns only affects the saturation level(Those golden glowy bits behind the food bar.) of foods. 
+Your steak will still return 5 nuggets, but if that's the only food you eat, that's all it will restore.
+Hunger Overhaul has also been added. 
+-Cows will only be able to be milked every 10 real life minutes.
+-Underground farms, or any farm not in sunlight will take 10 times longer.
+-You wooden and stone hoes can not be crafted. Try a tinker's mattock :D

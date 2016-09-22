@@ -1,6 +1,0 @@
-Added:
-Fast Leaf Decay
-
-Random Updates
-
-Fixed Bug causing game not to launch.

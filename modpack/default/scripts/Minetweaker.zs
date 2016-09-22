@@ -1,78 +1,78 @@
 //AlienMC Minetweaker script
+//Written By Cinealma, Tinmankxk, and Hadn69
 import mods.thaumcraft.Infusion;
 import mods.thaumcraft.Research;
 
-val fire = <minecraft:fire>;
-val goldBucket = <TConstruct:buckets:1>;
-val enderium = <ThermalFoundation:Storage:12>;
-val star = <minecraft:nether_star>;
-val boots = <ore:oc:hoverBoots>;
-val invis = <ExtraUtilities:angelRing>;
-val feather = <ExtraUtilities:angelRing:1>;
-val fairy = <ExtraUtilities:angelRing:2>;
-val dragon = <ExtraUtilities:angelRing:3>;
-val golden = <ExtraUtilities:angelRing:4>;
-val leather = <minecraft:leather>;
-val soulFragment = <ExtraUtilities:mini-soul>;
-val emeraldBlock = <minecraft:emerald_block>;
-val notchApple = <minecraft:golden_apple:1>;
-val redHeart = <TConstruct:heartCanister:1>;
+//Values
+val fence = <minecraft:fence>;
 
-//Angel Rings
-recipes.remove(<ExtraUtilities:angelRing:*>);
-recipes.addShapeless(fire, [<ore:ingotSteel>, <ore:ingotUnstable>, <minecraft:flint>]);
-recipes.addShaped(invis, [[<minecraft:glass>, enderium, <minecraft:glass>], [star, goldBucket, star], [fire, boots, fire]]);
-recipes.addShaped(feather, [[<minecraft:feather>, enderium, <minecraft:feather>], [star, goldBucket, star], [fire, boots, fire]]);
-recipes.addShaped(fairy, [[<minecraft:dye:5>, enderium, <minecraft:dye:9>], [star, goldBucket, star], [fire, boots, fire]]);
-recipes.addShaped(dragon, [[leather, enderium, leather], [star, goldBucket, star], [fire, boots, fire]]);
-recipes.addShaped(golden, [[<minecraft:gold_nugget>, enderium, <minecraft:gold_nugget>], [star, goldBucket, star], [fire, boots, fire]]);
+//AgriCraft
+//Seed Analyzer
+recipes.removeShaped(<AgriCraft:seedAnalyzer>);
+recipes.addShaped(<AgriCraft:seedAnalyzer>, [[<Forestry:oakStick>, <Botania:lens:4>, <Forestry:oakStick>], [<AgriCraft:seedSugarcane>, <AgriCraft:magnifyingGlass>, <Forestry:oakStick>], [<minecraft:log>, <minecraft:wool>, <minecraft:log>]]);
 
-recipes.addShapeless(invis, [feather]);
-recipes.addShapeless(invis, [fairy]);
-recipes.addShapeless(invis, [dragon]);
-recipes.addShapeless(invis, [golden]);
-recipes.addShapeless(feather, [<minecraft:feather>, invis, <minecraft:feather>]);
-recipes.addShapeless(fairy, [<minecraft:dye:5>, invis, <minecraft:dye:9>]);
-recipes.addShapeless(dragon, [leather, invis, leather]);
-recipes.addShapeless(golden, [<minecraft:gold_nugget>, invis, <minecraft:gold_nugget>]);
+//Botania
+//Everlasting Guilty Pool
 
-//Soul Fragment
-recipes.addShaped(soulFragment, [[redHeart, emeraldBlock, redHeart], [emeraldBlock, notchApple, emeraldBlock], [redHeart, emeraldBlock, redHeart]]);
+//BuildCraft Builders
+//Quarry
+recipes.removeShaped(<BuildCraft|Builders:machineBlock>);
 
-//<chisel:futura>
-//recipes.removeShapeless(<chisel:futura>);
-//recipes.removeShaped(<chisel:futura>);
-//recipes.addShapeless(<chisel:futura>, [<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:redstone>]);
+//BuildCraft Silicon
+//Assembly Table
+recipes.removeShaped(<BuildCraft|Silicon:laserTableBlock>);
+recipes.addShaped(<BuildCraft|Silicon:laserTableBlock>, [[<Mekanism:BasicBlock:2>, <Forestry:thermionicTubes:6>, <Mekanism:BasicBlock:2>], [<IronChest:BlockIronChest:6>, <Mekanism:ControlCircuit:1>, <IronChest:BlockIronChest:6>], [<Mekanism:BasicBlock:2>, <Forestry:thermionicTubes:6>, <Mekanism:BasicBlock:2>]]);
 
-//rftools Disable Dim stuff
-recipes.remove(<rftools:dimensionBuilderBlock:*>);
-recipes.remove(<rftools:emptyDimensionTab:*>);
-recipes.remove(<rftools:dimensionEnscriberBlock>);
-recipes.remove(<rftools:dimensionEditorBlock>);
+//Laser
+recipes.removeShaped(<BuildCraft|Silicon:laserBlock>);
+recipes.addShaped(<BuildCraft|Silicon:laserBlock>, [[<minecraft:obsidian>, <immersiveintegration:iiWireCoil>, <minecraft:obsidian>], [<MineFactoryReloaded:laserfocus:11>, <Mekanism:MachineBlock2:13>, <MineFactoryReloaded:laserfocus:11>], [<minecraft:obsidian>, <immersiveintegration:iiWireCoil>, <minecraft:obsidian>]]);
 
-//MFR Unifier
-//recipes.addShaped(<MineFactoryReloaded:machine.1:8>, [[<ore:sheetPlastic>, <ore:sheetPlastic>, <ore:sheetPlastic>], [<ore:dustRedstone>, <minecraft:comparator>, <ore:dustRedstone>], [null, <MineFactoryReloaded:machineblock>, null]]);
+//Buildcraft Transport
+//Pipe Sealant
+recipes.removeShaped(<BuildCraft|Transport:pipeWaterproof>);
+recipes.addShaped(<BuildCraft|Transport:pipeWaterproof>, [[<minecraft:slime_ball>, <minecraft:water_bucket>, <minecraft:slime_ball>]]);
 
-//Compressed Sawdust
-recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:dustWood>, <ore:dustWood>, <ore:dustWood>], [<ore:dustWood>, null, <ore:dustWood>], [<ore:dustWood>, <ore:dustWood>, <ore:dustWood>]]);
-recipes.addShaped(<ThermalExpansion:material:513>, [[<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>], [<ore:pulpWood>, null, <ore:pulpWood>], [<ore:pulpWood>, <ore:pulpWood>, <ore:pulpWood>]]);
+//Blood Magic
+//Blood Altar
+recipes.remove(<AWWayofTime:Altar>);
+recipes.addShaped(<AWWayofTime:Altar>, [[<minecraft:stone>, <minecraft:sponge>, <minecraft:stone>], [<Botania:manaResource:2>, <Mekanism:MachineBlock2:11>, <Botania:manaResource:2>], [<minecraft:stone>, <rftools:machineBase>, <minecraft:stone>]]);
 
-//Gravel -> Flint
-recipes.addShapeless(<minecraft:flint>, [<minecraft:gravel> * 2]);
 
-//Trowels
-recipes.remove(<Botany:trowelIron:*>);
-recipes.remove(<Botany:trowelDiamond:*>);
+//Etfuturum
+//Fence Stuff
+recipes.addShapeless(fence, [<etfuturum:fence_dark_oak>]);
+recipes.addShapeless(fence, [<etfuturum:fence_acacia>]);
+recipes.addShapeless(fence, [<etfuturum:fence_spruce>]);
+recipes.addShapeless(fence, [<etfuturum:fence_birch>]);
+recipes.addShapeless(fence, [<etfuturum:fence_oak>]);
+recipes.addShapeless(fence, [<etfuturum:fence_jungle>]);
 
-recipes.remove(<DimensionalAnchors:chunkloader>);
+//Slime 
+recipes.remove(<etfuturum:slime>);
 
-//Sigil
-Infusion.addRecipe("ASPECTS", <ExtraUtilities:divisionSigil>, [<RandomThings:ingredient:5>, <minecraft:nether_star>, <minecraft:nether_star>, <appliedenergistics2:item.ItemMultiMaterial:47>, <AWWayofTime:demonicSlate>, <AWWayofTime:demonicSlate>, <ExtraUtilities:bedrockiumIngot>, <Botania:pylon>, <Botania:pylon>, <ExtraBees:honeyComb:82>, <AWWayofTime:demonicSlate>, <AWWayofTime:demonicSlate>], "permutatio 32, alienis 32, superbia 64", <ExtraUtilities:divisionSigil>.withTag({stable: 1 as byte}), 25);
+//Extra Utilities
+//Division Sigil (Active)
+recipes.addShaped(<ExtraUtilities:divisionSigil>.withTag({damage: 256}), [[<ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>], [<ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>], [<ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>, <ExtraUtilities:divisionSigil>]]);
 
-Research.addResearch("DIVSIG", "BASICS", "superbia 100, alienis 200, permutatio 300", 1, 0, 8, <ExtraUtilities:divisionSigil>);
-game.setLocalization("en_US", "tc.research_name.DIVSIG", "The Power of Division");
-game.setLocalization("en_US", "tc.research_text.DIVSIG", "[AMC] Magic Recipes");
-Research.addPage("DIVSIG", "amc.page.DIVSIG");
-game.setLocalization("en_US", "amc.page.DIVSIG", "Have fun.");
-Research.addInfusionPage("DIVSIG", <ExtraUtilities:divisionSigil>);
-Research.setAutoUnlock("DIVSIG", true);
+//Ender-Flux Crystal
+recipes.removeShaped(<ExtraUtilities:endConstructor:2>);
+recipes.addShaped(<ExtraUtilities:endConstructor:2>*4, [[null, <ElectriCraft:electricraft_item_crystal:1>, null], [null, <minecraft:obsidian>, null], [<minecraft:obsidian>, <minecraft:obsidian>, <minecraft:obsidian>]]);
+
+//Ender Quarry
+recipes.removeShaped(<ExtraUtilities:enderQuarry>);
+recipes.addShaped(<ExtraUtilities:enderQuarry>, [[<ExtraUtilities:decorativeBlock1:1>, <EnderIO:blockReinforcedObsidian>, <ExtraUtilities:decorativeBlock1:1>], [<Botania:exchangeRod>, <ImmersiveEngineering:metalDevice:14>, <Thaumcraft:blockWoodenDevice:5>], [<ExtraUtilities:decorativeBlock1:1>, <EnderIO:blockReinforcedObsidian>, <ExtraUtilities:decorativeBlock1:1>]]);
+
+//Kikoku
+recipes.removeShaped(<ExtraUtilities:lawSword>);
+
+//QED
+recipes.removeShaped(<ExtraUtilities:endConstructor>);
+recipes.addShaped(<ExtraUtilities:endConstructor>, [[<Botania:enderEyeBlock>, <Thaumcraft:blockTable:15>, <Botania:enderEyeBlock>], [<RandomThings:enderEnergyDistributor>, <Botania:alchemyCatalyst>, <RandomThings:enderEnergyDistributor>], [<minecraft:obsidian>, <minecraft:obsidian>, <minecraft:obsidian>]]);
+
+
+//Mekanism
+
+//Creative Cube
+mods.avaritia.ExtremeCrafting.addShaped(<Mekanism:EnergyCube>.withTag({tier: "Creative", electricity: 1.7976931348623157E308}), [[<ThermalFoundation:Storage:11>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThermalFoundation:Storage:11>], [<ThaumicTinkerer:kamiResource:2>, <Avaritia:big_pearl>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <Avaritia:big_pearl>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <Avaritia:big_pearl>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <ThermalExpansion:Frame:9>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <ThermalExpansion:Frame:9>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <ThermalExpansion:Frame:9>, <RedstoneArsenal:Storage>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <RedstoneArsenal:Storage>, <ThermalExpansion:Frame:9>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <Avaritia:big_pearl>, <RedstoneArsenal:Storage>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <RedstoneArsenal:Storage>, <Avaritia:big_pearl>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <ThermalExpansion:Frame:9>, <RedstoneArsenal:Storage>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <ExtraUtilities:generator.64:7>, <RedstoneArsenal:Storage>, <ThermalExpansion:Frame:9>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <ThermalExpansion:Frame:9>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <RedstoneArsenal:Storage>, <ThermalExpansion:Frame:9>, <ThaumicTinkerer:kamiResource:2>], [<ThaumicTinkerer:kamiResource:2>, <Avaritia:big_pearl>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <Avaritia:big_pearl>, <ThermalExpansion:Frame:9>, <ThermalExpansion:Frame:9>, <Avaritia:big_pearl>, <ThaumicTinkerer:kamiResource:2>], [<ThermalFoundation:Storage:11>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThaumicTinkerer:kamiResource:2>, <ThermalFoundation:Storage:11>]]);
+
+
