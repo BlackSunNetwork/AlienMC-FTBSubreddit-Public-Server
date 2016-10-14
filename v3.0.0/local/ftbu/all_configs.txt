@@ -1,0 +1,43 @@
+# RankConfigs
+
+> ConfigID | Default Player Value | Default OP Value
+
+> display.badge | "" | ""
+| Prefix of player's nickname
+: Type: string
+
+> display.color | "white" | "green"
+| Color of player's nickname
+: Type: enum
+: Variants: [dark_red, green, underline, dark_green, black, yellow, bold, italic, dark_blue, dark_purple, gold, red, aqua, gray, light_purple, blue, white, dark_aqua, dark_gray, reset, strikethrough, obfuscated]
+
+> display.prefix | "" | ""
+| Prefix of player's nickname
+: Type: string
+
+> ftbu.chunkloader.offline_timer | 24.0 | -1.0
+| Max hours player can be offline until he's chunks unload
+| 0 - Disabled, will unload instantly when he disconnects
+| -1 - Chunk will always be loaded
+: Type: double
+: Min: -1
+
+> ftbu.chunkloader.type | "offline" | "offline"
+| disabled: Players won't be able to chunkload
+| offline: Chunks stay loaded when player loggs off
+| online: Chunks only stay loaded while owner is online
+: Type: enum
+: Variants: [offline, online, disabled]
+
+> ftbu.claims.forced_explosions | "-" | "-"
+| -: Player setting
+| disabled: Explosions will never happen in claimed chunks
+| enabled: Explosions will always happen in claimed chunks
+: Type: enum
+: Variants: [-, enabled, disabled]
+
+> ftbu.homes.max | 1 | 100
+| Max home count
+: Type: short
+: Min: 0
+: Max: 30000

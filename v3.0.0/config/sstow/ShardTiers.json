@@ -1,0 +1,56 @@
+{
+  "0": {
+    "minKills": 0,
+    "maxKills": 127,
+    "checkPlayer": true,
+    "checkLight": false,
+    "checkRedstone": false,
+    "spawnAmount": 0,
+    "cooldown": 0
+  },
+  "1": {
+    "minKills": 128,
+    "maxKills": 255,
+    "checkPlayer": true,
+    "checkLight": true,
+    "checkRedstone": true,
+    "spawnAmount": 2,
+    "cooldown": 10
+  },
+  "2": {
+    "minKills": 256,
+    "maxKills": 511,
+    "checkPlayer": true,
+    "checkLight": true,
+    "checkRedstone": true,
+    "spawnAmount": 4,
+    "cooldown": 6
+  },
+  "3": {
+    "minKills": 512,
+    "maxKills": 1023,
+    "checkPlayer": true,
+    "checkLight": false,
+    "checkRedstone": true,
+    "spawnAmount": 4,
+    "cooldown": 4
+  },
+  "4": {
+    "minKills": 1024,
+    "maxKills": 2047,
+    "checkPlayer": false,
+    "checkLight": false,
+    "checkRedstone": true,
+    "spawnAmount": 5,
+    "cooldown": 3
+  },
+  "5": {
+    "minKills": 2048,
+    "maxKills": 4096,
+    "checkPlayer": false,
+    "checkLight": false,
+    "checkRedstone": true,
+    "spawnAmount": 7,
+    "cooldown": 2
+  }
+}

@@ -1,0 +1,213 @@
+{
+    "images":
+    {
+		"logo":
+        {
+            "image" : "mainmenu:textures/logo.png",
+            "posX" : 128,
+            "posY" : -60,
+            "width" : 475,
+            "height" : 240,
+            "alignment" : "top_left"
+        }
+	
+	},
+    
+    "buttons":
+    {     
+		"singleplayer":
+        {
+            "text" : "Singleplayer",
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : -40,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "singleplayer"
+            }
+        },
+        "Server Direct Connect":
+        {
+            "text" : "Join the Server",
+            "normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"posX" : 130,
+            "posY" : -20,
+            "width" : 196,
+            "height" : 20,
+            imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+			"texture" : "mainmenu:textures/btn.png",
+            "action" : 
+            {
+                "type" : "connectToServer",
+				"ip" : "ftb.alienmc.co"
+            }
+        },	
+
+		"multiplayer":
+        {
+            "text" : "Multiplayer",			
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : 0,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "multiplayer"
+            }
+        },
+               
+		"options":
+        {
+            "text" : "Options",
+			"normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : 50,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+		        
+		"language":
+        {
+            "text" : "Language",
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : 70,
+            "width" : 196,
+            "height" : 20,
+            "normalTextColor" : 9737471,
+			"hoverTextColor" : 16729344,
+			imageWidth : 100,
+			imageHeight : 50,			
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "languages"
+            }
+        },
+                    
+        "quit":
+        {
+            "text" : "Quit Game",
+			"normalTextColor" : 16729344,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : 90,
+            "width" : 196,
+            "height" : 20,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+			"hoverText" : "No! Don't leave!",
+            "action" : 
+            {
+                "type" : "quit"
+            }
+        },
+		
+        "mods":
+        {
+            "text" : "",
+			"normalTextColor" : 6710886,
+			"hoverTextColor" : 16729344,
+			"texture" : "mainmenu:textures/btn.png",
+            "posX" : 130,
+            "posY" : 110,
+            "width" : 0,
+            "height" : 0,
+			imageWidth : 100,
+			imageHeight : 50,
+			"alignment" : "left_center",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "mods"
+            }
+        }
+	},
+    
+    "texts":
+    {
+        "mojang":
+        {
+            "text" : "Copyright Mojang AB. Do not distribute!",
+            "posX" : 1,
+            "posY" : -10,
+            "color" : 9737471,
+            "alignment" : "bottom_left"
+        },
+        
+		"packtxt":
+        {
+            "text" : "AlienMC Version 3.0",
+            "posX" : 1,
+            "posY" : -30,
+            "color" : 9737471,
+            "alignment" : "bottom_left"
+        },
+		
+		"devtxt2":
+        {
+            "text" : "By: r/AlienMC",
+            "posX" : 1,
+            "posY" : -20,
+            "color" : 9737471,
+            "alignment" : "bottom_left"
+        }
+    },
+    
+    "other":
+    {
+		
+        "background":
+        {
+            "image" : "",
+            "slideshow":
+            {
+                "images" : [
+                    "mainmenu:scrn/1.png",
+                    "mainmenu:scrn/2.png",
+                    "mainmenu:scrn/3.png",
+                    "mainmenu:scrn/4.png",
+                    "mainmenu:scrn/5.png",
+                    "mainmenu:scrn/6.png",
+                    "mainmenu:scrn/7.png",
+                    "mainmenu:scrn/8.png",
+                    "mainmenu:scrn/9.png"
+                ],
+                "displayDuration" : 100,
+                "fadeDuration" : 40,
+                "shuffle" : true
+            }
+        }
+    }
+}
