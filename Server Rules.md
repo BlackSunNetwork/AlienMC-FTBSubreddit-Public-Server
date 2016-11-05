@@ -4,8 +4,6 @@
 
 * No CC programs that create an infinite loop without a sleep function
 
-* No TPS checking
-
 * No Griefing
 
 * No lag machines - Do not allow farms/machines to back up or spew.
@@ -19,7 +17,7 @@
 * No sexism, racism, homophobia or any type of hate speech!
 
 This is a safe space for everyone regardless of race, sexual orientation, or gender identity.
-If you find a bug or exploit, please inform an admin through Discord/ModMail on reddit.
+If you find a bug or exploit, please inform a staff member.
 Chunks can be claimed and loaded using FTB Utils. 
 Loaded chunks will only be active while you are online.  
 Have common sense, and do your best to be nice to others.  
