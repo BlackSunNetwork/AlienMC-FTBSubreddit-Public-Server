@@ -7,8 +7,8 @@
 
   <li>SSD Storage</li>
 
-  <li>Gigabit Up/Down</li>
+  <li>10 Gigabit Up/Down</li>
 
-  <li>Running MCMyAdmin w/ KCauldron 1.7.10-1448</li>
+  <li>Running AMP</li>
 
 </ol>
